@@ -1,0 +1,39 @@
+﻿/*
+	This style overrides certain styles from the standard UCSD styles for the ContentTwoColumn.aspx layout
+*/
+
+/*
+	First import the standard styles to get everything we normally use
+*/
+
+@import "/Style Library/UCSD.css";
+
+/*
+	Now override the styles specific to the ContentTwoColumn.aspx page
+*/
+
+
+.bgContent {
+	/*background:url("/Style%20Library/Images/UCSD/bg_content_2col.gif") repeat-y;*/
+}
+
+.wrapperContent2Column{
+	padding:0 0 0px 0;
+	/*background:url("/Style%20Library/Images/UCSD/column.png") -8px top no-repeat;*/
+}
+
+.centerColumn {
+	width:660px;
+	padding: 0 35px 20px 35px;
+	z-index: 50;
+}
+
+/* one column layout with out left nav */
+
+.oneColumnContent {
+    padding: 10px 60px;
+    width:800px;
+	z-index: 50;
+	min-height:400px;
+}
+

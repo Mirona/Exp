@@ -1,0 +1,78 @@
+﻿/*	Explore Dropdown Styles	*/
+
+#explore {
+	float:left;
+	width: 218px;
+	padding:0 20px 0 8px;
+	margin-right:97px;
+}
+
+.dropdown{
+	position:relative;
+	bottom:0;
+	width: 218px;
+	list-style:none;
+	z-index:1000;
+	margin:0;
+	padding:0 20px 0 10px;
+	background:none;
+}
+ul.dropdown li{
+	background: transparent url("/Style%20Library/Images/Navigation/arrow_gray.gif") no-repeat scroll right center;	
+	font-size:1px;
+}
+ul.dropdown li.first{
+	width: 238px;
+}
+
+ul.dropdown:hover{
+	background: url("/Style%20Library/Images/Navigation/bkgd_nav_beige_gradient.png") repeat-y scroll top left;
+}
+
+ul.dropdown li a{
+	font:normal 11px Arial, Helvetica, sans-serif;
+	color:#666;
+	text-decoration:none;
+	line-height:27px;
+}
+ul.dropdown li a:hover{
+	text-decoration:none;
+}
+ul.dropdown li ul{
+	display:none;
+}
+
+ul.dropdown li:hover ul{
+	list-style:none;
+	display:block;
+	position:absolute;
+	width:248px;
+	left:0px;
+	top:27px;
+	margin:0;
+	padding:0 0 4px 0;
+	background: url("/Style%20Library/Images/Navigation/bgDropMenuBeige.png") no-repeat scroll left bottom;
+}
+ul.dropdown li:hover ul li{
+	position:relative;
+	padding:3px 10px 3px 10px;
+	height:auto;
+	width:228px;
+	background-image:none;
+	background: url("/Style%20Library/Images/Navigation/bkgd_nav_beige_gradient.png") repeat-y scroll top left;
+}
+ul.dropdown li:hover ul li a {
+	color:#FFF;
+	display:block;
+	width:228px;
+	line-height:17px;
+}
+ul.dropdown li ul li:hover{
+	background: url("/Style%20Library/Images/Navigation/bgTopNavHovBeige.png") repeat-y scroll top left;
+	color:#666;
+	text-decoration:none;
+}
+
+ul.dropdown li:hover ul li a:hover {
+	color:#666;
+}

@@ -1,0 +1,92 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>Disovery SharePoint Hover Panel</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#SearchResults;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:ManagedPropertyMapping msdt:dt="string">&#39;Title&#39;:&#39;Title&#39;,&#39;Path&#39;:&#39;Path&#39;,&#39;Created By&#39;:&#39;MetadataAuthor&#39;,&#39;Created On&#39;:&#39;Write&#39;,&#39;Author&#39;:&#39;DisplayAuthor&#39;,&#39;Size&#39;:&#39;Size&#39;,&#39;LastModifiedTime&#39;:&#39;LastModifiedTime&#39;,&#39;CollapsingStatus&#39;:&#39;CollapsingStatus&#39;,&#39;DocId&#39;:&#39;DocId&#39;,&#39;HitHighlightedSummary&#39;:&#39;HitHighlightedSummary&#39;,&#39;ContentClass&#39;:&#39;ContentClass&#39;,&#39;ContentType&#39;:&#39;ContentType&#39;,&#39;FileExtension&#39;:&#39;FileExtension&#39;,&#39;ViewsLifeTime&#39;:&#39;ViewsLifeTime&#39;,&#39;ParentLink&#39;:&#39;ParentLink&#39;</mso:ManagedPropertyMapping>
+<mso:_dlc_DocId msdt:dt="string">7FMFKTXUU5F3-2-275</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">234e81a0-1c3b-49cc-9b40-fd8b6d877014</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">http://pedsptest.pediatrics.ucsd.edu/_layouts/15/DocIdRedir.aspx?ID=7FMFKTXUU5F3-2-275, 7FMFKTXUU5F3-2-275</mso:_dlc_DocIdUrl>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+<div id="Item_eDiscoverySharePoint_HoverPanel">
+<!--#_
+var id = ctx.CurrentItem.csr_id;
+ctx.CurrentItem.csr_ShowFollowLink = false;
+ctx.CurrentItem.csr_ShowLastModifiedTime = true;
+ctx.CurrentItem.csr_ShowAuthors = true;
+ctx.CurrentItem.csr_AuthorsLabel = $resource("hp_RecentlyEdited_eDiscovery");
+ctx.CurrentItem.csr_ShowFileIcon = true;
+
+var fileExtension = $getItemValue(ctx,"FileExtension");
+if (!fileExtension.isEmpty) 
+{
+    var prefixedFileName = Srch.U.getFriendlyNameForFileExtension(fileExtension.value);
+    if(!$isEmptyString(prefixedFileName) && !$isEmptyString(Srch.Res[prefixedFileName]))
+    {
+        ctx.CurrentItem.csr_FileType = $resource(prefixedFileName);
+    }
+}
+
+var summaryEncoded = "";
+var hhSummary = $getItemValue(ctx, "HitHighlightedSummary");
+if(!hhSummary.isEmpty)
+{
+    var su = Srch.U.processHHXML(hhSummary.value);    
+    summaryEncoded = Srch.U.getTrimmedProcessedHHXMLString(su, Srch.U.summaryTruncationLengthWithPreview);
+}
+
+var pathLength = ctx.CurrentItem.csr_PathLength;
+if(!pathLength) 
+{
+    pathLength = Srch.U.pathTruncationLength;
+}
+var displayPath = displayPath = $htmlEncode($getItemValue(ctx, "Path").value);
+var truncatedUrl = Srch.U.truncateHighlightedUrl(displayPath, pathLength);
+
+var innerContainerId = id + HP.ids.inner;
+if(!$isEmptyString(summaryEncoded)) {
+    $addRenderContextCallback(ctx, "OnPostRender", function(){
+        HP.SetWidth(id, innerContainerId, 500);
+    });
+}
+_#-->
+    <div class="ms-srch-hover-innerContainer ms-srch-hover-standardSize" id="_#= $htmlEncode(innerContainerId) =#_">
+        <div class="ms-srch-hover-arrowBorder" id="_#= $htmlEncode(id + HP.ids.arrowBorder) =#_"></div>
+        <div class="ms-srch-hover-arrow" id="_#= $htmlEncode(id + HP.ids.arrow) =#_"></div>
+        <div class="ms-srch-hover-content" id="_#= $htmlEncode(id + HP.ids.content) =#_" data-displaytemplate="DiscoverySharePointHoverPanel">
+            <div id="_#= $htmlEncode(id + HP.ids.header) =#_" class="ms-srch-hover-header">
+                _#= ctx.RenderHeader(ctx) =#_
+                <div id="_#= $htmlEncode(id + Srch.U.Ids.path) =#_" tabindex="0" class="ms-metadata" title="_#= $htmlEncode(ctx.CurrentItem.Path) =#_" 
+                        onblur="Srch.U.restoreText(this, '_#= $scriptEncode(truncatedUrl) =#_', '_#= $scriptEncode(ctx.CurrentItem.Path) =#_')" 
+                        onclick="Srch.U.selectText('_#= $scriptEncode(ctx.CurrentItem.Path) =#_', this)" >
+                    _#= truncatedUrl =#_
+                </div>
+            </div>
+            <div id="_#= $htmlEncode(id + HP.ids.body) =#_" class="ms-srch-hover-body">
+                _#= ctx.RenderBody(ctx) =#_
+<!--#_
+if(!$isEmptyString(summaryEncoded))
+{
+_#-->
+                <div class="ms-srch-hover-subTitle"><h3 class="ms-soften">_#= $htmlEncode(Srch.Res.hp_Summary) =#_</h3></div>
+                <div class="ms-srch-hover-text" id="_#= $htmlEncode(id + HP.ids.summary) =#_">
+                    _#= summaryEncoded =#_
+                </div>
+<!--#_
+}
+_#-->
+            </div>
+        </div> 
+    </div>
+</div>
+</body>
+</html>

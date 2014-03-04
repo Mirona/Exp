@@ -1,0 +1,39 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+<title>Catalog Item Title</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">1</mso:TemplateHidden>
+<mso:ManagedPropertyMapping msdt:dt="string">&#39;Page Title&#39;:&#39;Title&#39;</mso:ManagedPropertyMapping>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#Content Web Parts;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:_dlc_DocId msdt:dt="string">7FMFKTXUU5F3-2-263</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">876c261c-8b10-4311-8a11-02c1bdd4a713</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">http://pedsptest.pediatrics.ucsd.edu/_layouts/15/DocIdRedir.aspx?ID=7FMFKTXUU5F3-2-263, 7FMFKTXUU5F3-2-263</mso:_dlc_DocIdUrl>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <div id="Item_CatalogTitle">
+
+<!--#_
+
+var pageTitle = $getItemValue(ctx, "Page Title");
+
+if (pageTitle.isEmpty)
+{
+    pageTitle = $getItemValue(ctx, "Title");
+}
+
+if(!(pageTitle.isEmpty))
+{
+    document.title = pageTitle.toString(); 
+}
+_#-->
+
+    </div>
+</body>
+</html>

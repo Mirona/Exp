@@ -1,0 +1,44 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+<title>Link with count</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:CompatibleManagedProperties msdt:dt="string"></mso:CompatibleManagedProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:CompatibleSearchDataTypes msdt:dt="string"></mso:CompatibleSearchDataTypes>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106604</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#TaxonomyRefinement;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:_dlc_DocId msdt:dt="string">7FMFKTXUU5F3-2-27</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">80d3cb69-8ac5-4403-a787-f7792b68c6a6</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">http://pedsptest.pediatrics.ucsd.edu/_layouts/15/DocIdRedir.aspx?ID=7FMFKTXUU5F3-2-27, 7FMFKTXUU5F3-2-27</mso:_dlc_DocIdUrl>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+<div id="Filter_TaxonomyRefinement">
+<!--#_
+        var nameClass = "ms-ref-name " + (ctx.RenderCounts ? "ms-displayInline" : "ms-displayInlineBlock ms-ref-ellipsis");
+_#-->
+    <div id="Value" name="Item">
+        <a id='FilterLink' class="ms-core-listMenu-item" href="javascript:{}" onclick="$getClientControl(this).handleClickOnCategoryLink('_#= $scriptEncode(ctx.CurrentItem.id) =#_');">
+            <div class='_#= nameClass =#_'>
+                            _#= $htmlEncode(ctx.CurrentItem.displayName)  =#_
+            </div>
+<!--#_
+        if (ctx.RenderCounts)
+        {
+_#-->
+            <div class='ms-ref-count ms-textSmall'>
+                (_#= $htmlEncode(ctx.CurrentItem.count) =#_)
+            </div>
+<!--#_
+        }
+_#-->
+        </a>
+    </div>
+</div>
+</body>
+</html>

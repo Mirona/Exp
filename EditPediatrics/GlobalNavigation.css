@@ -1,0 +1,130 @@
+﻿
+/* ==============================
+	Main Container
+============================== */
+
+#globalNav
+{
+	width: 919px;
+	height: 36px;
+	margin: 0;
+	padding: 0;
+	z-index: 3;
+	position: relative;
+}
+
+
+/* ==============================
+	Root Menu
+============================== */
+
+div.RadMenu_UCSDGlobalNav ul.rmRootGroup
+{
+	width: 919px;
+	height: 34px;
+	background: #77AFCB; 
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+
+div.RadMenu_UCSDGlobalNav li.rmItem 
+{  																
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff; /* keeps border between root and drop down */
+	white-space: normal;
+	padding: 0;
+	/*max-width: 200px;*/ /* You may need to adjust this depending on number of top nav items */									
+}
+
+div.RadMenu_UCSDGlobalNav li.rmLast 
+{							
+	border-right: none; /* Remove border on last item */
+}
+
+div.RadMenu_UCSDGlobalNav li.rmItem a.rmLink 
+{ 	
+	font: bold 11px Arial, Helvetica, sans-serif;		
+	line-height: 14px;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 10px 8px; /* Change the left/right padding to make nav span entire menu */ 																	
+}
+
+/* Hover, Focused, Selected state */
+
+div.RadMenu_UCSDGlobalNav li.rmItem a.rmLink:hover,
+div.RadMenu_UCSDGlobalNav li.rmItem a.rmFocused,
+div.RadMenu_UCSDGlobalNav li.rmItem a.rmSelected
+{
+	background: #00245D; 
+}
+
+/* Long Text Nav Items */
+
+div.RadMenu_UCSDGlobalNav li.rmItem a.rmLinkLongText 
+{ 		
+	padding: 3px 4px;
+	height: 28px;  	   
+}
+
+/* For vertically centered, double line menu. */
+
+/*
+div.RadMenu_UCSDGlobalNav li.rmItem a.rmLink 
+{ 	
+	padding: 3px 4px;
+	height: 28px;  	   
+}
+*/
+
+
+/* ==============================
+	Sub Menus
+============================== */
+
+div.RadMenu_UCSDGlobalNav ul.rmGroup,
+div.RadMenu_UCSDGlobalNav ul.rmMultiColumn,
+div.RadMenu_UCSDGlobalNav ul.rmVertical
+{
+	background: #77AFCB;
+	width: 200px;
+}
+
+div.RadMenu_UCSDGlobalNav ul.rmGroup li.rmItem,
+div.RadMenu_UCSDGlobalNav ul.rmGroup span.rmText 
+{ 				 
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+div.RadMenu_UCSDGlobalNav ul.rmGroup li.rmItem a.rmLink
+{
+	text-align: left;
+	text-transform: none;
+	width: 184px;										
+	padding: 7px 8px;  								
+}
+
+/* Drop down hover effect  */
+
+div.RadMenu_UCSDGlobalNav ul.rmGroup li.rmItem a.rmLink:hover 
+{		
+	background: #00245D; 
+}
+
+/* removes padding on text links applied by the system */
+
+div.RadMenu_UCSDGlobalNav ul.rmHorizontal span.rmText 
+{    		
+	padding: 0;
+}
+
+div.RadMenu_UCSDGlobalNav ul.rmVertical li.rmFirst,
+div.RadMenu_UCSDGlobalNav ul.rmVertical li.rmLast
+{
+	/* any styles for first and last links in drop downs */
+}
+

@@ -1,0 +1,459 @@
+<%-- SPG:
+
+This HTML file has been associated with a SharePoint Master Page (.master file) carrying the same name.  While the files remain associated, you will not be allowed to edit the .master file, and any rename, move, or deletion operations will be reciprocated.
+
+To build the master page directly from this HTML file, simply edit the page as you normally would.  Use the Snippet Generator at http://pedvsp13test02/_layouts/15/ComponentHome.aspx?Url=http%3A%2F%2Fpedvsp13test02%2F%5Fcatalogs%2Fmasterpage%2FNew%20Pediatrics%2FMaster%2FIndexbak%2Emaster to create and customize useful SharePoint entities, then copy and paste them as HTML snippets into your HTML code.   All updates to this file will automatically sync to the associated Master Page.
+
+ --%>
+<%@Master language="C#"%>
+<%@Register TagPrefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
+<%@Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
+<%@Register TagPrefix="wssucw" TagName="Welcome" Src="~/_controltemplates/15/Welcome.ascx"%>
+<%@Register TagPrefix="wssucmui" TagName="MUISelector" Src="~/_controltemplates/15/MUISelector.ascx"%>
+<%@Register TagPrefix="PublishingRibbon" TagName="PublishingRibbon" Src="~/_controltemplates/15/Ribbon.ascx"%>
+<%@Register TagPrefix="SearchWC" Namespace="Microsoft.Office.Server.Search.WebControls" Assembly="Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
+<!DOCTYPE html >
+<SharePoint:SPHtmlTag runat="server" id="SPHtmlTag" dir="&lt;%$Resources:wss,multipages_direction_dir_value%&gt;">
+    <head runat="server">
+        <meta http-equiv="X-UA-Compatible" content="IE=10" />
+        
+        
+        
+        
+        <meta name="GENERATOR" content="Microsoft SharePoint" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Expires" content="0" />
+        <SharePoint:RobotsMetaTag runat="server">
+        </SharePoint:RobotsMetaTag>
+        <SharePoint:PageTitle runat="server">
+            <asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server">
+                <SharePoint:ProjectProperty Property="Title" runat="server">
+                </SharePoint:ProjectProperty>
+            </asp:ContentPlaceHolder>
+        </SharePoint:PageTitle>
+        <SharePoint:StartScript runat="server">
+        </SharePoint:StartScript>
+        <SharePoint:CssLink runat="server" Version="15">
+        </SharePoint:CssLink>
+        <SharePoint:CacheManifestLink runat="server">
+        </SharePoint:CacheManifestLink>
+        <SharePoint:PageRenderMode runat="server" RenderModeType="Standard">
+        </SharePoint:PageRenderMode>
+        <SharePoint:ScriptLink language="javascript" name="core.js" OnDemand="true" runat="server" Localizable="false">
+        </SharePoint:ScriptLink>
+        <SharePoint:ScriptLink language="javascript" name="menu.js" OnDemand="true" runat="server" Localizable="false">
+        </SharePoint:ScriptLink>
+        <SharePoint:ScriptLink language="javascript" name="callout.js" OnDemand="true" runat="server" Localizable="false">
+        </SharePoint:ScriptLink>
+        <SharePoint:ScriptLink language="javascript" name="sharing.js" OnDemand="true" runat="server" Localizable="false">
+        </SharePoint:ScriptLink>
+        <SharePoint:ScriptLink language="javascript" name="suitelinks.js" OnDemand="true" runat="server" Localizable="false">
+        </SharePoint:ScriptLink>
+        <SharePoint:CustomJSUrl runat="server">
+        </SharePoint:CustomJSUrl>
+        <SharePoint:SoapDiscoveryLink runat="server">
+        </SharePoint:SoapDiscoveryLink>
+        <SharePoint:AjaxDelta id="DeltaPlaceHolderAdditionalPageHead" Container="false" runat="server">
+            <asp:ContentPlaceHolder id="PlaceHolderAdditionalPageHead" runat="server">
+            </asp:ContentPlaceHolder>
+            <SharePoint:DelegateControl runat="server" ControlId="AdditionalPageHead" AllowMultipleControls="true">
+            </SharePoint:DelegateControl>
+            <asp:ContentPlaceHolder id="PlaceHolderBodyAreaClass" runat="server">
+            </asp:ContentPlaceHolder>
+        </SharePoint:AjaxDelta>
+        <SharePoint:CssRegistration Name="Themable/corev15.css" runat="server">
+        </SharePoint:CssRegistration>
+        <SharePoint:AjaxDelta id="DeltaSPWebPartManager" runat="server">
+            <WebPartPages:SPWebPartManager runat="server">
+            </WebPartPages:SPWebPartManager>
+        </SharePoint:AjaxDelta>
+        
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <SharePoint:CssRegistration name="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/New Pediatrics/UCSD.css %&gt;" runat="server" after="SharepointCssFile" />
+        <script type="text/javascript" src="/_catalogs/masterpage/New Pediatrics/Style Library/JavaScript/fade_image_gallery.js">//<![CDATA[
+        
+        
+        
+        
+        
+        //]]></script>
+        <script type="text/javascript" src="/_catalogs/masterpage/New Pediatrics/Style Library/JavaScript/custom_activex_override.js">//<![CDATA[
+        
+        
+        
+        
+        
+        //]]></script>
+        <script type="text/javascript" src="/_catalogs/masterpage/New Pediatrics/Style Library/JavaScript/jquery.js">//<![CDATA[
+        
+        
+        
+        
+        
+        //]]></script>
+        <script type="text/javascript" src="/_catalogs/masterpage/New Pediatrics/Style Library/JavaScript/jquery-ui-1.8.11.custom.min.js">//<![CDATA[
+        
+        
+        
+        
+        
+        //]]></script>
+        <script type="text/javascript" src="/_catalogs/masterpage/New Pediatrics/Style Library/JavaScript/AviciaSlider/flexslider.js">//<![CDATA[
+        
+        
+        
+        
+        
+        //]]></script>
+        <script type="text/javascript" src="/_catalogs/masterpage/New Pediatrics/Style Library/JavaScript/AviciaSlider/jquery.min.js">//<![CDATA[
+        
+        
+        
+        
+        
+        //]]></script>
+        <script type="text/javascript" src="/_catalogs/masterpage/New Pediatrics/Style Library/JavaScript/core.js">//<![CDATA[
+        
+        
+        
+        
+        
+        //]]></script>
+        <script type="text/javascript" src="/_catalogs/masterpage/New Pediatrics/Style Library/JavaScript/init.js">//<![CDATA[
+        
+        
+        
+        
+        
+        //]]></script>
+        
+        
+    </head>
+    <body onhashchange="if (typeof(_spBodyOnHashChange) != 'undefined') _spBodyOnHashChange();"><SharePoint:SPClientIDGenerator runat="server" ServerControlID="DeltaPlaceHolderMain;DeltaPlaceHolderPageTitleInTitleArea;DeltaPlaceHolderUtilityContent" /><SharePoint:ImageLink runat="server" /><SharePoint:SharePointForm onsubmit="if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;}" runat="server"><asp:ScriptManager id="ScriptManager" runat="server" EnablePageMethods="false" EnablePartialRendering="true" EnableScriptGlobalization="false" EnableScriptLocalization="true" />
+        
+        
+        
+        <SharePoint:SPSecurityTrimmedControl runat="server" HideFromSearchCrawler="true" EmitDiv="true">
+            <div id="TurnOnAccessibility" style="display:none" class="s4-notdlg noindex">
+                <a id="linkTurnOnAcc" href="#" class="ms-accessible ms-acc-button" onclick="SetIsAccessibilityFeatureEnabled(true);UpdateAccessibilityUI();document.getElementById('linkTurnOffAcc').focus();return false;">
+                    <SharePoint:EncodedLiteral runat="server" text="&lt;%$Resources:wss,master_turnonaccessibility%&gt;" EncodeMethod="HtmlEncode">
+                    </SharePoint:EncodedLiteral>
+                </a>
+            </div>
+            <div id="TurnOffAccessibility" style="display:none" class="s4-notdlg noindex">
+                <a id="linkTurnOffAcc" href="#" class="ms-accessible ms-acc-button" onclick="SetIsAccessibilityFeatureEnabled(false);UpdateAccessibilityUI();document.getElementById('linkTurnOnAcc').focus();return false;">
+                    <SharePoint:EncodedLiteral runat="server" text="&lt;%$Resources:wss,master_turnoffaccessibility%&gt;" EncodeMethod="HtmlEncode">
+                    </SharePoint:EncodedLiteral>
+                </a>
+            </div>
+        </SharePoint:SPSecurityTrimmedControl>
+        <div id="ms-designer-ribbon">
+            <PublishingRibbon:PublishingRibbon runat="server" />
+            
+        </div>
+        <SharePoint:SPSecurityTrimmedControl runat="server" AuthenticationRestrictions="AnonymousUsersOnly">
+            <wssucw:Welcome runat="server" EnableViewState="false">
+            </wssucw:Welcome>
+        </SharePoint:SPSecurityTrimmedControl>
+        
+        <div id="s4-workspace">
+            <div id="s4-bodyContainer">
+                <div id="wrapper">
+                    <div class="box-shadow">
+                        <div id="container">
+                            <div id="explore" title="Explore other UCSD Health Sciences Sites">
+                                <table width="100%" cellspacing="0" cellpadding="0" border="0" toplevel="">
+                                    <tbody>
+                                        <tr>
+                                            <td valign="top">
+                                                <div id="WebPartWPQ1" style="" allowdelete="false" onlyformepart="true" width="100%" haspers="true" webpartid="00000000-0000-0000-0000-000000000000">
+                                                    <div id="explore">
+                                                        <ul class="dropdown">
+                                                            <li class="first">
+                                                                <a href="#">Explore other UCSD Health Sciences sites 
+                                                                </a>
+                                                                <ul>
+                                                                    <li title="">
+                                                                        <a href="http://som.ucsd.edu">UCSD School of Medicine 
+                                                                        </a>
+                                                                    </li>
+                                                                    <li title="">
+                                                                        <a href="http://healthsciences.ucsd.edu">UC San Diego Health Sciences 
+                                                                        </a>
+                                                                    </li>
+                                                                    <li title="">
+                                                                        <a href="http://health.ucsd.edu">UC San Diego Health System 
+                                                                        </a>
+                                                                    </li>
+                                                                    <li title="">
+                                                                        <a href="http://cancer.ucsd.edu">UC San Diego Moores Cancer Center 
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="SharePointSiteActionsMenu">
+                                <div data-name="SearchBox">
+                                    
+                                    
+                                    <SearchWC:SearchBoxScriptWebPart UseSiteCollectionSettings="true" EmitStyleReference="false" ShowQuerySuggestions="false" ChromeType="None" UseSharedSettings="true" TryInplaceQuery="false" ServerInitialRender="true" runat="server">
+                                        
+                                    </SearchWC:SearchBoxScriptWebPart>
+                                    
+                                </div>
+                            </div>
+                            <div class="clr">
+                            </div>
+                            <div id="HeaderTopCorners">
+                            </div>
+                            <div class="wrapperpageborder">
+                                <div id="header">
+                                    <div id="logo">
+                                        <a id="ctl00_PlaceHolderPageImage_HyperLink2" class="logo" href="/">
+                                            <img src="/_catalogs/masterpage/New Pediatrics/Images/UCSD/logo-ucsd-som-radys.gif" width="230" height="65" />
+                                        </a>
+                                    </div>
+                                    <!-- End #logo -->
+                                    <div id="title">
+                                        <span id="ctl00_PlaceHolderPageImage_PlaceHolderDivTitle_ctl00_lblDivisionTitle">
+                                            <div class="title_name">
+                                                <a href="/">Department of Pediatrics 
+                                                </a>
+                                            </div>
+                                        </span>
+                                    </div>
+                                    <!-- End PlaceHolderPageImage -->
+                                    <div id="search">
+                                        <!--	Utility Links: Start	-->
+                                        <table toplevel="" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top">
+                                                        <div webpartid="00000000-0000-0000-0000-000000000000" haspers="true" id="WebPartWPQ2" width="100%" onlyformepart="true" allowdelete="false" style="">
+                                                            <ul class="utilityLinks right">
+                                                                <li title="" class="first">
+                                                                    <a href="http://pediatrics.ucsd.edu/about/news/Pages/default.aspx">News 
+                                                                    </a>
+                                                                </li>
+                                                                <li title="">
+                                                                    <a href="http://www.pediatrics.ucsd.edu">Business Services 
+                                                                    </a>
+                                                                </li>
+                                                                <li title="">
+                                                                    <a href="http://www-er.ucsd.edu/givetoUCSD/secure/paymenttran/onlinegiving.asp?sk=3&amp;txtFundName=Pediatrics%20Discretionary%20Fund%20(4115)&amp;txtFundNo=4115&amp;txtSolicCode=&amp;pk=">Give 
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!--	Utility Links: End	-->
+                                        <!-- End PlaceHolderUtilityLinks -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wrapperPageBorder">
+                                <div id="globalNav">
+                                    <!-- =====  Horizontal Top Navigation Bar ============================================================ -->
+                                    <!-- top / global nav  -->
+                                    <!--	Top navigation menu for the page	-->
+                                    <div class="RadMenu RadMenu_UCSDGlobalNav" id="ctl00_PlaceHolderHorizontalNav_GlobalRadMenu" style="z-index: 7000;">
+                                        <div id="globalNav">
+                                            <!-- 2009.3.1103.20 -->
+                                            <div data-name="TopNavigationNoFlyoutWithStartNode">
+                                                
+                                                
+                                                <SharePoint:AjaxDelta ID="DeltaTopNavigation" BlockElement="true" CssClass="ms-displayInline ms-core-navigation ms-dialogHidden" runat="server">
+                                                    
+                                                    <SharePoint:DelegateControl runat="server" ControlId="TopNavigationDataSource" Id="topNavigationDelegate">
+                                                        
+                                                        <Template_Controls>
+                                                            <asp:SiteMapDataSource ShowStartingNode="True" SiteMapProvider="SPNavigationProvider" ID="topSiteMap" runat="server" StartingNodeUrl="sid:1002">
+                                                            </asp:SiteMapDataSource>
+                                                        </Template_Controls>
+                                                    </SharePoint:DelegateControl>
+                                                    <a name="startNavigation">
+                                                    </a>
+                                                    <asp:ContentPlaceHolder ID="PlaceHolderTopNavBar" runat="server">
+                                                        <SharePoint:AspMenu ID="TopNavigationMenu" runat="server" EnableViewState="false" DataSourceID="topSiteMap" AccessKey="&lt;%$Resources:wss,navigation_accesskey%&gt;" UseSimpleRendering="true" UseSeparateCss="false" Orientation="Horizontal" StaticDisplayLevels="2" AdjustForShowStartingNode="false" MaximumDynamicDisplayLevels="0" SkipLinkText="">
+                                                            
+                                                        </SharePoint:AspMenu>
+                                                    </asp:ContentPlaceHolder>
+                                                    
+                                                </SharePoint:AjaxDelta>
+                                                
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="ctl00_PlaceHolderHorizontalNav_GlobalRadMenu_ClientState" id="ctl00_PlaceHolderHorizontalNav_GlobalRadMenu_ClientState" autocomplete="off" />
+                                    </div>
+                                    <!-- datasource for nav  -->
+                                </div>
+                                <div class="bgContent">
+
+                                    <div class="wrapperContent3Column">
+                                        <div class="wrapperContent2Column">
+                                            <div class="mainPgContent">
+                                                <div id="divisionHomeTop">
+                                                    <div class="clr">
+                                                    </div>
+                                                    <div id="divisionHomeBottom">
+                                                        <div data-name="ContentPlaceHolderMain">
+                                                            
+                                                            
+                                                            <SharePoint:AjaxDelta ID="DeltaPlaceHolderMain" IsMainContent="true" runat="server">
+                                                                <asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server">
+                                                                    <div class="DefaultContentBlock" style="border:medium black solid; background:yellow; color:black; margin:20px; padding:10px;"> This div, which you should delete, represents the content area that your Page Layouts and pages will fill. Design your Master Page around this content placeholder. 
+                                                                    </div>
+                                                                </asp:ContentPlaceHolder>
+                                                            </SharePoint:AjaxDelta>
+                                                            
+                                                        </div>
+                                                        <div id="homeColumnLeft">
+                                                            <h1>
+                                                                <span>
+                                                                </span>
+                                                            </h1>
+                                                            <h1>
+                                                            </h1>
+                                                            <h1>
+                                                                <span>
+                                                                </span>
+                                                            </h1>
+                                                        </div>
+                                                        <div id="homeColumnCenter">
+                                                            <h1>
+                                                                <span>
+                                                                </span>
+                                                            </h1>
+                                                        </div>
+                                                        <div class="clr">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="customClear">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="pageBottom">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="footer" style="left: 0px; top: 0px" title="PlaceHolderFooter">
+                        <div id="FooterAddress" title="PlaceHolderFooterAddress">
+                            <ul class="address">
+                                <li class="first">UCSD School of Medicine 
+                                </li>
+                                <li>9500 Gilman Drive, MC 0602 
+                                </li>
+                                <li>La Jolla, CA 92093 
+                                </li>
+                                <li>(858) 534-0830 
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="footerlinks" title="PlaceHolderFooterLinks">
+                            <table width="100%" cellspacing="0" cellpadding="0" border="0" toplevel="">
+                                <tbody>
+                                    <tr>
+                                        <td valign="top">
+                                            <div id="WebPartWPQ3" style="" allowdelete="false" onlyformepart="true" width="100%" haspers="true" webpartid="00000000-0000-0000-0000-000000000000">
+                                                <ul class="footerNav">
+                                                    <li class="first" title="Home">
+                                                        <a href="/">Home 
+                                                        </a>
+                                                    </li>
+                                                    <li title="">
+                                                        <a href="http://pediatrics.ucsd.edu/about/">About 
+                                                        </a>
+                                                    </li>
+                                                    <li title="">
+                                                        <a href="http://pediatrics.ucsd.edu/faculty/">Faculty 
+                                                        </a>
+                                                    </li>
+                                                    <li title="">
+                                                        <a href="http://pediatrics.ucsd.edu/divisions">Divisions 
+                                                        </a>
+                                                    </li>
+                                                    <li title="">
+                                                        <a href="http://pediatrics.ucsd.edu/patient-care">Patient Care 
+                                                        </a>
+                                                    </li>
+                                                    <li title="">
+                                                        <a href="http://pediatrics.ucsd.edu/research">Research 
+                                                        </a>
+                                                    </li>
+                                                    <li title="">
+                                                        <a href="http://pediatrics.ucsd.edu/education/">Education 
+                                                        </a>
+                                                    </li>
+                                                    <li title="">
+                                                        <a href="http://pediatrics.ucsd.edu/events/">Events &amp; Training 
+                                                        </a>
+                                                    </li>
+                                                    <li title="">
+                                                        <a href="http://peds.ucsd.edu/business/">Business Services 
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="footerLogo" title="UC San Diego Footer Logo">
+                            <a id="ctl00_PlaceHolderFooter_PlaceHolderFooterLogo_HyperLink1" class="logoFooter" href="http://www.ucsd.edu">
+                                <img style="border-width:0px;" alt=" Visit UCSD Web Site" src="http://assets.ucsd.edu/img/logo/ucsd-footer.png" />
+                            </a>
+                        </div>
+                        <div class="copyright" title="UC San Diego Copyright">
+                            <p> Official Web Site of the University of California, San Diego. 
+            
+                                <script language="javascript">//<![CDATA[
+<!--
+today = new Date();
+document.write("Copyright &copy;", today.getFullYear());
+//-->
+
+                                    
+                                
+                                
+                                
+                                
+                                //]]></script>
+ 
+            Copyright ©2014 Regents of the University of California. All rights reserved.                             </p>
+                        </div>
+                        <ul class="footerLegalLinks">
+                            <li class="first">
+                                <a href="/Pages/legal.aspx">Legal 
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://health.ucsd.edu/hipaa">Notice of Privacy Practices 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Pages/sitemap.aspx">Sitemap 
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <SharePoint:AjaxDelta id="DeltaFormDigest" BlockElement="true" runat="server"><asp:ContentPlaceHolder id="PlaceHolderFormDigest" runat="server"><SharePoint:formdigest runat="server" /></asp:ContentPlaceHolder></SharePoint:AjaxDelta></SharePoint:SharePointForm><SharePoint:AjaxDelta id="DeltaPlaceHolderUtilityContent" runat="server"><asp:ContentPlaceHolder id="PlaceHolderUtilityContent" runat="server" /></SharePoint:AjaxDelta><asp:ContentPlaceHolder id="PlaceHolderTitleAreaClass" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleBreadcrumb" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderGlobalNavigationSiteMap" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderGlobalNavigation" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderSearchArea" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftNavBar" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderHorizontalNav" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftNavBarDataSource" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderCalendarNavigator" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftActions" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftNavBarTop" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderSiteName" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderPageDescription" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderPageImage" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleLeftBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderMiniConsole" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleRightMargin" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleAreaSeparator" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderNavSpacer" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftNavBarBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderBodyLeftBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderBodyRightMargin" Visible="False" runat="server" /><asp:ContentPlaceHolder id="WSSDesignConsole" Visible="False" runat="server" /><asp:ContentPlaceHolder id="SPNavigation" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderQuickLaunchTop" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderQuickLaunchBottom" Visible="False" runat="server" /></body>
+</SharePoint:SPHtmlTag>

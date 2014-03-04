@@ -1,0 +1,98 @@
+﻿/*
+	This style overrides certain styles from the standard UCSD styles for the ContentTwoColumn.aspx layout
+*/
+
+/*
+	First import the standard styles to get everything we normally use
+*/
+
+@import "/Style Library/UCSD.css";
+
+/*
+	Now override the styles specific to the ContentTwoColumn.aspx page
+*/
+
+
+.bgContent {
+}
+
+.wrapperContent2Column{
+	padding:0 0 0px 0;
+}
+
+.centerColumn {
+	width:660px;
+	padding: 0 35px;
+	z-index: 50;
+}
+
+#pageBottom {
+}
+
+#labHomeTop {
+	height:250px;
+	width:660px;
+    margin:0;
+    position:relative;
+    line-height: 20px;
+	padding:0px 0px 20px 0px;
+}
+
+#labWebPartTop {
+	height:250px;
+	width:660px;
+	position:relative;
+    margin:0;
+    padding:0;
+}
+
+#labWebPartTop div.slide {
+	height:250px;
+	width:660px;
+	position:absolute;
+	top:0px; left:0px;
+    margin:0;
+    padding:0;
+	z-index:4;
+}
+
+#slideShow div.active {
+	z-index:5;
+}
+
+
+#labHomeBottom {
+	min-height:310px;
+	height:auto !important;
+	width:660px;
+	line-height: 20px;
+	position:relative;
+	padding:0px 0px 20px 0px;
+}
+
+#homeColumnLeft, #homeColumnRight {
+	min-height:300px;
+	height:auto !important;
+}
+
+#homeColumnLeft {
+	float:left;
+	width:420px;
+	padding:0px 0px 10px 0px;
+}
+
+#homeColumnRight {
+	float: right;
+	width: 200px;
+	padding:0px 0px 10px 0px;
+	margin-left: 10px;
+}
+
+#homeColumnLeft h2, #homeColumnRight h2 {
+	color:#4d4d4f;
+	font-size:16px;
+	padding-bottom:2px;
+	margin-bottom:3px;
+	border-bottom:1px solid #D8CFC6;
+}
+

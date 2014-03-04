@@ -1,0 +1,17 @@
+﻿/************* 			BreadCrumb Styles 			***********/
+#breadcrumb {
+	font-size: 11px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#666;
+	padding: 15px 0 15px 24px;
+	background-color:#FFF;
+}
+
+#breadcrumb a:link, #breadcrumb a:visited, #breadcrumb a:hover {
+	color:#0067AC;		/* This changes per site  */
+	padding: 0 5px;
+}
+
+.breadcrumbCurrent {
+	padding: 0 5px;
+}

@@ -1,0 +1,90 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>Web page Hover Panel</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:MasterPageDescription msdt:dt="string">Displays a result hover panel tailored for a web page.</mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#SearchHoverPanel;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:ManagedPropertyMapping msdt:dt="string">&#39;Title&#39;:&#39;Title&#39;,&#39;Path&#39;:&#39;Path&#39;,&#39;Description&#39;:&#39;Description&#39;,&#39;EditorOWSUSER&#39;:&#39;EditorOWSUSER&#39;,&#39;LastModifiedTime&#39;:&#39;LastModifiedTime&#39;,&#39;CollapsingStatus&#39;:&#39;CollapsingStatus&#39;,&#39;DocId&#39;:&#39;DocId&#39;,&#39;HitHighlightedSummary&#39;:&#39;HitHighlightedSummary&#39;,&#39;HitHighlightedProperties&#39;:&#39;HitHighlightedProperties&#39;,&#39;FileExtension&#39;:&#39;FileExtension&#39;,&#39;ViewsLifeTime&#39;:&#39;ViewsLifeTime&#39;,&#39;ParentLink&#39;:&#39;ParentLink&#39;,&#39;FileType&#39;:&#39;FileType&#39;,&#39;IsContainer&#39;:&#39;IsContainer&#39;,&#39;SecondaryFileExtension&#39;:&#39;SecondaryFileExtension&#39;,&#39;DisplayAuthor&#39;:&#39;DisplayAuthor&#39;</mso:ManagedPropertyMapping>
+<mso:_dlc_DocId msdt:dt="string">7FMFKTXUU5F3-2-245</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">c4b2f166-fc62-4f12-a79d-a948ea7d4bb4</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">http://pedsptest.pediatrics.ucsd.edu/_layouts/15/DocIdRedir.aspx?ID=7FMFKTXUU5F3-2-245, 7FMFKTXUU5F3-2-245</mso:_dlc_DocIdUrl>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <div id="Item_WebPage_HoverPanel">
+<!--#_
+		var i = 0;
+		var id = ctx.CurrentItem.csr_id;
+        var loadSiteFrame = false;
+        ctx.CurrentItem.csr_ShowFollowLink = true;
+        ctx.CurrentItem.csr_ShowViewLibrary = false;
+        ctx.CurrentItem.csr_ShowLastModifiedTime = false;
+        ctx.CurrentItem.csr_ShowAuthors = false;
+_#-->
+		<div class="ms-srch-hover-innerContainer ms-srch-hover-standardSize" id="_#= $htmlEncode(id + HP.ids.inner) =#_">
+			<div class="ms-srch-hover-arrowBorder" id="_#= $htmlEncode(id + HP.ids.arrowBorder) =#_"></div>
+			<div class="ms-srch-hover-arrow" id="_#= $htmlEncode(id + HP.ids.arrow) =#_"></div>
+			<div class="ms-srch-hover-content" id="_#= $htmlEncode(id + HP.ids.content) =#_" data-displaytemplate="WebPageHoverPanel">
+                <div id="_#= $htmlEncode(id + HP.ids.header) =#_" class="ms-srch-hover-header">
+					_#= ctx.RenderHeader(ctx) =#_
+				</div>
+                <div id="_#= $htmlEncode(id + HP.ids.body) =#_" class="ms-srch-hover-body">
+<!--#_
+                    if(!Srch.U.w(ctx.CurrentItem.csr_Path) && Srch.U.isSameHost(ctx.CurrentItem.csr_Path, Srch.U.getHostName())) {
+                        ctx.CurrentItem.csr_DataShown = true;
+                        loadSiteFrame = true;
+                        var idViewerEncoded = $htmlEncode(id + HP.ids.viewer);
+                        var idGlassViewerEncoded = "glass_" + idViewerEncoded;
+_#-->				    
+                        <div class="ms-srch-hover-viewerContainer ms-srch-hover-siteViewerContainer">
+                            <div id="_#= idGlassViewerEncoded =#_" class="ms-srch-hover-glass-siteViewer"></div>
+                            <iframe id="_#=idViewerEncoded=#_" src="_#= $urlHtmlEncode(ctx.CurrentItem.csr_Path) =#_" scrolling="no" frameborder="0px" class="ms-srch-hover-siteViewer">
+                            </iframe>                            
+                        </div>
+<!--#_	
+                        if(!Srch.U.w(ctx.CurrentItem.ParentLink))
+                        {
+                            var siteResultsId = id + "_siteSearchResults";
+_#-->
+                            <div id="_#= $htmlEncode(siteResultsId) =#_">
+                            </div>
+<!--#_
+                            AddPostRenderCallback(ctx, function()
+                            {
+                                var query = "";
+                                var dataProvider = ctx.ClientControl.get_dataProvider();
+                                if (dataProvider) {
+                                    var states = dataProvider.get_currentQueryState()
+                                    if (states) {
+                                        query = states.k;
+                                    }
+                                }
+
+                                Srch.SiteSearchUtil.populateSiteSearchResults(ctx.CurrentItem.ParentLink, siteResultsId, query);
+                            });
+                        }                        
+                    }
+_#-->			                    
+                    _#= ctx.RenderBody(ctx) =#_
+                </div>			
+				<div id="_#= $htmlEncode(id + HP.ids.actions) =#_" class="ms-srch-hover-actions">                  
+					_#= ctx.RenderFooter(ctx) =#_
+				</div>
+			</div>
+<!--#_			
+			if(loadSiteFrame){
+				AddPostRenderCallback(ctx, function(){
+					HP.loadSiteViewer(ctx.CurrentItem.id, ctx.CurrentItem.id + HP.ids.inner, id + HP.ids.viewer, ctx.CurrentItem.csr_Path, "glass_" + id + HP.ids.viewer);
+				});
+			}
+_#-->
+		</div>
+    </div>
+</body>
+</html>

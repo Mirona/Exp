@@ -1,0 +1,86 @@
+﻿/*	Header Styles	*/
+
+#HeaderTopCorners {
+	position: relative;
+	width: 919px;
+	height: 9px;
+	background: transparent  url("Images/UCSD/bg_header_top_corners.gif") no-repeat;
+	line-height: 1px;
+	font-size: 1px;
+	overflow:hidden;
+
+}
+#header {
+	clear: both;
+	width: 919px;
+	height: 94px;
+	background: #2D84AF url("Images/UCSD/bg_header.gif") no-repeat;
+	overflow: hidden;
+	position: relative;
+}
+
+#logo {
+	float: left;
+	width: 230px;
+	height:65px;
+	position:absolute;
+	left: 12px;
+	top: 10px;
+}
+
+#search {
+	float: right;
+	/*width: 300px;
+	padding: 8px 10px 0 10px;*/
+}
+
+.searchContainer{
+	position:relative;
+	float:right;
+	z-index:3;
+	width:203px;
+	padding:20px 25px 0px 0;
+	height:24px;
+}
+
+/* title styles */
+
+#title {
+	text-align:left;
+	width: 380px; 
+	padding-right: 10px;
+	line-height: 25px; 
+	position:absolute;
+	top:10px;
+	left:270px;
+}
+	
+.title_name, .title_name a,
+.title_name_long, .title_name_long a {
+	font-family: Arial, Helvetica, san serif;
+	font-size: 24px;
+	font-weight: bold;
+	font-style: normal;
+	color: #fff;
+}
+	
+.title_name_long, .title_name_long a {
+	font-size: 21px;
+}
+
+.title_name {
+	padding-top: 14px;			
+}
+
+.title_name a:hover, .title_name_long a:hover {
+	text-decoration:none;
+}
+
+.title_dept, .title_dept a {
+	font-family: Arial, Helvetica, san serif;
+	font-size: 13px;
+	font-weight: bold;
+	font-style: normal;
+	color: #00245D;
+}
+

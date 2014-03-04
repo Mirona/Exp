@@ -1,0 +1,79 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>One property per cell, one item per row for SharePoint</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">1</mso:TemplateHidden>
+<mso:ManagedPropertyMapping msdt:dt="string">&#39;Title&#39;:&#39;Title&#39;,&#39;Path&#39;:&#39;Path&#39;,&#39;Created By&#39;:&#39;MetadataAuthor&#39;,&#39;Created On&#39;:&#39;Write&#39;,&#39;Author&#39;:&#39;DisplayAuthor&#39;,&#39;Size&#39;:&#39;Size&#39;,&#39;LastModifiedTime&#39;:&#39;LastModifiedTime&#39;,&#39;CollapsingStatus&#39;:&#39;CollapsingStatus&#39;,&#39;DocId&#39;:&#39;DocId&#39;,&#39;HitHighlightedSummary&#39;:&#39;HitHighlightedSummary&#39;,&#39;ContentClass&#39;:&#39;ContentClass&#39;,&#39;ContentType&#39;:&#39;ContentType&#39;,&#39;FileExtension&#39;:&#39;FileExtension&#39;,&#39;ViewsLifeTime&#39;:&#39;ViewsLifeTime&#39;,&#39;ParentLink&#39;:&#39;ParentLink&#39;</mso:ManagedPropertyMapping>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#Content Web Parts;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:_dlc_DocId msdt:dt="string">7FMFKTXUU5F3-2-274</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">ec5dc3f0-506b-4553-bb36-9368c6f5c60d</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">http://pedsptest.pediatrics.ucsd.edu/_layouts/15/DocIdRedir.aspx?ID=7FMFKTXUU5F3-2-274, 7FMFKTXUU5F3-2-274</mso:_dlc_DocIdUrl>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+
+    <div id="Item_eDiscoverySharePointResult">
+<!--#_
+var path = $getItemValue(ctx,"Path");
+path.overrideValueRenderer($urlHtmlEncode);
+
+var name = $getItemValue(ctx,"Title");
+
+var creator = $getItemValue(ctx,"Created By");
+
+var createdDate = $getItemValue(ctx,"Created On");
+var dateFormat = function(date)
+{
+    if(!(date.isNull) && !$isNull(date.value.format)) 
+    {
+        return $htmlEncode(date.value.localeFormat(Sys.CultureInfo.CurrentCulture.dateTimeFormat.ShortDatePattern));
+    }
+    else 
+    {
+        return "";
+    }
+};
+createdDate.overrideValueRenderer(dateFormat);
+
+window.eDiscIsDialog = function()
+{
+    return !$isNull(window.top.g_childDialog);
+}
+
+var id = ctx.ClientControl.get_nextUniqueId();
+var itemId = id + Srch.U.Ids.item;
+var hoverId = id + Srch.U.Ids.hover;
+$setResultItem(itemId, ctx.CurrentItem);
+var hoverUrl = "~sitecollection/_catalogs/masterpage/Display Templates/System/Item_eDiscoverySharePoint_HoverPanel.js";
+_#-->
+        <tr class="edisc-SearchResultItemContainer">
+            <td>
+                <div class="edisc-SearchResultItem" id="_#= $htmlEncode(itemId) =#_" name="Item" onmouseover="if (!eDiscIsDialog()) EnsureScriptParams('SearchUI.js', 'HP.Init', event, '_#= $scriptEncode(itemId) =#_', '_#= $scriptEncode(hoverId) =#_', '_#= $scriptEncode(hoverUrl)=#_');" onmouseout="if (!eDiscIsDialog()) EnsureScriptParams('SearchUI.js', 'HP.Hide');">
+                    <div id='_#= hoverId =#_' class='ms-srch-hover-outerContainer'></div>
+                        <div class='edisc-SubjectContainer'>
+                            <a href='_#= path =#_' TARGET='_blank'>
+                                _#= name =#_
+                            </a>
+                        </div>
+                    </div>
+            </td>
+            <td>
+                <div class='edisc-PeopleContainer'>
+                    _#= creator =#_
+                </div>
+            </td>
+            <td>
+                <div class='edisc-DateContainer'>
+                    _#= createdDate =#_
+                </div>
+            </td>
+        </tr>
+    </div>
+</body>
+</html>

@@ -1,0 +1,530 @@
+﻿<%@ Master Language="C#" %>
+<html dir="ltr">
+
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>UCSD</title>
+<asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+
+<form id="form1" runat="server">
+	<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+</form>
+<%@ Import Namespace="Microsoft.SharePoint" %>
+<%@ Register TagPrefix="SPSWC" Namespace="Microsoft.SharePoint.Portal.WebControls" Assembly="Microsoft.SharePoint.Portal, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="PublishingWebControls" Namespace="Microsoft.SharePoint.Publishing.WebControls" Assembly="Microsoft.SharePoint.Publishing, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="PublishingNavigation" Namespace="Microsoft.SharePoint.Publishing.Navigation" Assembly="Microsoft.SharePoint.Publishing, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="wssuc" TagName="Welcome" Src="~/_controltemplates/Welcome.ascx" %>
+<%@ Register TagPrefix="wssuc" TagName="DesignModeConsole" Src="~/_controltemplates/DesignModeConsole.ascx" %>
+<%@ Register TagPrefix="PublishingVariations" TagName="VariationsLabelMenu" Src="~/_controltemplates/VariationsLabelMenu.ascx" %>
+<%@ Register TagPrefix="PublishingConsole" TagName="Console" Src="~/_controltemplates/PublishingConsole.ascx" %>
+<%@ Register TagPrefix="PublishingSiteAction" TagName="SiteActionMenu" Src="~/_controltemplates/PublishingActionMenu.ascx" %>
+<%@ Register TagPrefix="telerik" Assembly="Telerik.Web.UI, Version=2009.3.1103.20, Culture=neutral, PublicKeyToken=121fae78165ba3d4" Namespace="Telerik.Web.UI" %>
+<%@ Register TagPrefix="UCSD" TagName="SectionTitle" Src="~/_controltemplates/SectionTitle/SectionTitleUserControl.ascx" %>
+<%@ Register TagPrefix="UCSD" TagName="DivisionTitle" Src="~/_controltemplates/DivisionTitle/DivisionTitleUserControl.ascx" %>
+
+<html dir="<%$Resources:wss, multipages_direction_dir_value %>"  runat="server" __expr-val-dir="ltr">
+
+	<head id="Head1" runat="server">
+		<meta name="GENERATOR" content="Microsoft SharePoint">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="Expires" content="0">
+		<!--
+			SharePoint requires the "IE=EmulateIE7" http-equiv meta tag to function properly when a DOCTYPE is specified since IE8 displays internet-facing web sites
+			in full "Standards" mode when a DOCTYPE is specified which can cause problems with some of the legacy HTML that is behind the scenes in SharePoint Server
+		-->
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+		<SharePoint:RobotsMetaTag runat="server"/>
+
+		<!--	Meta tags from metatagger	-->
+		
+		<SharePoint:DelegateControl ControlId="AdditionalPageHead" runat="server"></SharePoint:DelegateControl>
+
+		<title id="onetidTitle"></title>
+
+        <asp:ContentPlaceHolder ID="PlaceHolderBodyAreaClass" runat="server">
+
+			<!--	Additional body styles 	-->
+		
+			<SharePoint:CssLink ID="CssLink_UCSD" runat="server" DefaultUrl="/Style Library/UCSD.css"/>
+
+        </asp:ContentPlaceHolder>
+
+		<!--	Styles used for positioning, font and spacing definitions	-->
+		
+		<SharePoint:ScriptLink name="init.js" runat="server"/>
+
+		<!--	Browser style sheet overrides	-->
+		<!--[if IE 6]>
+			<link rel="stylesheet" type="text/css" href="/Style%20Library/ie6.css" />
+		<![endif]-->
+		<!--	Overrides name.dll in IE7	-->
+		
+		<script type="text/javascript" src="http://assets.ucsd.edu/js/jquery.min.js"></script>
+		<script type="text/javascript" src="http://assets.ucsd.edu/js/global-nav-width.js"></script>
+		
+		<asp:ContentPlaceHolder id="PlaceHolderAdditionalPageHead" runat="server">
+			<!--         Additional content that needs to be withint the <head> tag of the page, for example, references to script in style sheets         -->
+             <!--         This code may be replaced - do not include required functionality or references here   -->                                
+                                <!-- Print Style Sheet -->
+                <link rel="stylesheet" runat="server" media="print" title="Print Style" type="text/css" href="<%$SPUrl:~SiteCollection/Style Library/print.css%>"  />
+
+        </asp:ContentPlaceHolder>
+
+		<script type="text/javascript" src="/Style%20Library/JavaScript/custom_activex_override.js"></script> 
+		
+		<!--	Google Analytics for Pediatrics	-->
+				<script type="text/javascript">
+				
+				  var _gaq = _gaq || [];
+				  _gaq.push(['_setAccount', 'UA-28048416-5']);
+				  _gaq.push(['_trackPageview']);
+				
+				  (function() {
+				    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				  })();
+				
+				</script>
+
+	</head>
+
+	<body class="body" onload="javascript:_spBodyOnLoadWrapper();">
+
+	  	<form id="Form1" runat="server" onsubmit="return _spFormOnSubmitWrapper();">
+
+			<!--	ScriptManager used for Telerik AJAX controls	-->
+			
+			<asp:ScriptManager runat="server" id="ScriptManager1" />
+
+			<WebPartPages:SPWebPartManager ID="SPWebPartManager1" runat="server"/>
+
+<!-- =====  Edit Bars  ============================================================ -->		
+
+	<!-- wss edit console -->
+	<wssuc:DesignModeConsole id="IdDesignModeConsole" runat="server"/>
+	
+	<!-- publishing page editor toolbar  -->
+	<PublishingConsole:Console runat="server"/>
+	
+	<div id="wrapper">
+	<div id="container">
+		<div class="SharePointMenu">
+			<div class="SharePointSiteActionsMenu" title="SharePoint Site Actions Menu">
+				<!-- site actions menu  -->
+				<PublishingSiteAction:SiteActionMenu runat="server"/>
+			</div><!-- End .SharePointSiteActionsMenu -->
+		</div><!-- End .SharePointMenu -->
+						
+		
+					
+		<asp:ContentPlaceHolder runat="server" id="PlaceHolderExploreDropdown">
+			<div id="explore" title="Explore other UCSD Health Sciences Sites">
+				<!--	Explore Dropdown: Start	-->
+				<WebPartPages:DataFormWebPart runat="server" IsIncluded="True" FrameType="None" NoDefaultStyle="TRUE" ViewFlag="0" Title="Explore Links" ListName="{3D320E04-62A4-4ED0-9235-14E10AADF0AC}" Default="FALSE" DisplayName="Explore Links" __markuptype="vsattributemarkup" __WebPartId="{BE8515F5-A350-4A78-B56C-E3451AB499D3}" id="g_be8515f5_a350_4a78_b56c_e3451ab499d3" __AllowXSLTEditing="true" WebPart="true" Height="" Width="">
+					<DataSources>
+						<SharePoint:SPDataSource runat="server" DataSourceMode="List" UseInternalName="true" selectcommand="&lt;View&gt;&lt;Query&gt;&lt;OrderBy&gt;&lt;FieldRef Name=&quot;Link_x0020_Order&quot; Ascending=&quot;TRUE&quot;/&gt;&lt;FieldRef Name=&quot;URL&quot; Ascending=&quot;TRUE&quot;/&gt;&lt;/OrderBy&gt;&lt;/Query&gt;&lt;/View&gt;" id="Explore_x0020_Links1"><SelectParameters><WebPartPages:DataFormParameter Name="ListName" ParameterKey="ListName" PropertyName="ParameterValues" DefaultValue="Explore Links" /><WebPartPages:DataFormParameter Name="WebURL" ParameterKey="WebURL" PropertyName="ParameterValues" DefaultValue="{sitecollectionroot}"/>
+							</SelectParameters><DeleteParameters><WebPartPages:DataFormParameter Name="ListName" ParameterKey="ListName" PropertyName="ParameterValues" DefaultValue="Explore Links" /><WebPartPages:DataFormParameter Name="WebURL" ParameterKey="WebURL" PropertyName="ParameterValues" DefaultValue="{sitecollectionroot}"/>
+							</DeleteParameters><UpdateParameters><WebPartPages:DataFormParameter Name="ListName" ParameterKey="ListName" PropertyName="ParameterValues" DefaultValue="Explore Links" /><WebPartPages:DataFormParameter Name="WebURL" ParameterKey="WebURL" PropertyName="ParameterValues" DefaultValue="{sitecollectionroot}"/>
+							</UpdateParameters><InsertParameters><WebPartPages:DataFormParameter Name="ListName" ParameterKey="ListName" PropertyName="ParameterValues" DefaultValue="Explore Links" /><WebPartPages:DataFormParameter Name="WebURL" ParameterKey="WebURL" PropertyName="ParameterValues" DefaultValue="{sitecollectionroot}"/>
+							</InsertParameters>
+						</SharePoint:SPDataSource>
+					</DataSources>
+					<ParameterBindings>
+					<ParameterBinding Name="ListName" Location="None" DefaultValue="Explore Links"/>
+					<ParameterBinding Name="dvt_apos" Location="Postback;Connection"/>
+					<ParameterBinding Name="UserID" Location="CAMLVariable" DefaultValue="CurrentUserName"/>
+					<ParameterBinding Name="Today" Location="CAMLVariable" DefaultValue="CurrentDate"/>
+				</ParameterBindings>
+					<datafields>@Link_x0020_Order,Link Order;@URL,URL;@Comments,Notes;@ID,ID;@ContentType,Content Type;@Modified,Modified;@Created,Created;@Author,Created By;@Editor,Modified By;@_UIVersionString,Version;@Attachments,Attachments;@Title,Title;@File_x0020_Type,File Type;@FileLeafRef,Name (for use in forms);@FileDirRef,Path;@FSObjType,Item Type;@_HasCopyDestinations,Has Copy Destinations;@_CopySource,Copy Source;@ContentTypeId,Content Type ID;@_ModerationStatus,Approval Status;@_UIVersion,UI Version;@Created_x0020_Date,Created;@FileRef,URL Path;</datafields>
+					<XSL>
+						<xsl:stylesheet xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:d="http://schemas.microsoft.com/sharepoint/dsp" version="1.0" exclude-result-prefixes="xsl msxsl ddwrt" xmlns:ddwrt="http://schemas.microsoft.com/WebParts/v2/DataView/runtime" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:__designer="http://schemas.microsoft.com/WebParts/v2/DataView/designer" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:SharePoint="Microsoft.SharePoint.WebControls" xmlns:ddwrt2="urn:frontpage:internal">
+							<xsl:output method="html" indent="no"/>
+							<xsl:decimal-format NaN=""/>
+							<xsl:param name="dvt_apos">&apos;</xsl:param>
+							<xsl:variable name="dvt_1_automode">0</xsl:variable>
+							<xsl:template match="/" xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:d="http://schemas.microsoft.com/sharepoint/dsp" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:__designer="http://schemas.microsoft.com/WebParts/v2/DataView/designer" xmlns:SharePoint="Microsoft.SharePoint.WebControls">
+											<xsl:call-template name="dvt_1"/>
+							</xsl:template>
+							<xsl:template name="dvt_1">
+											<xsl:variable name="dvt_StyleName">BulTitl</xsl:variable>
+											<xsl:variable name="Rows" select="/dsQueryResponse/Rows/Row" />
+							
+								<div id="explore" >
+									<ul class="dropdown">
+										<li class="first"><a href="#">Explore other UCSD Health Sciences sites</a>
+											<ul>
+															<xsl:call-template name="dvt_1.body">
+																			<xsl:with-param name="Rows" select="$Rows"/>
+															</xsl:call-template>
+											</ul>
+										</li>
+									</ul>
+								</div>
+								
+							</xsl:template>
+							<xsl:template name="dvt_1.body">
+											<xsl:param name="Rows" />
+											<xsl:for-each select="$Rows">
+															<xsl:call-template name="dvt_1.rowview" />
+								</xsl:for-each>
+							</xsl:template>
+							<xsl:template name="dvt_1.rowview">
+								<li title="{@Comments}"><a href="{substring-before(@URL, ', ')}"><xsl:value-of select="substring-after(@URL, ', ')" /></a></li>
+							</xsl:template>
+						</xsl:stylesheet>
+					</XSL>
+				</WebPartPages:DataFormWebPart>
+				<!--	Explore Dropdown: End	-->
+			</div><!-- End  #explore -->
+		</asp:ContentPlaceHolder><!-- End PlaceHolderExploreDropdown-->
+		
+		<div class="clr"></div>
+		
+		<div id="HeaderTopCorners"></div><!-- End #HeaderTopCorners -->
+		
+		<div class="wrapperPageBorder">
+			<div id="header">
+				<asp:ContentPlaceHolder ID="PlaceHolderPageImage" runat="server">
+					<div id="logo">
+						<asp:HyperLink runat="server" id="HyperLink2" ImageUrl="/Style Library/Images/UCSD/logo-ucsd-som-radys.gif" CssClass="logo" NavigateUrl="/">Return to this site's home page</asp:HyperLink>
+					</div><!-- End #logo -->
+                             <asp:ContentPlaceHolder id="PlaceHolderDivTitle" runat="server">                
+									<div id="title">
+                                   		<UCSD:DivisionTitle runat="server"/>
+                                    </div>
+                             </asp:ContentPlaceHolder>
+				</asp:ContentPlaceHolder><!-- End PlaceHolderPageImage -->
+								
+				<asp:ContentPlaceHolder ID="PlaceHolderSearchArea" runat="server">
+					<div id="search">
+						<asp:ContentPlaceHolder runat="server" id="PlaceHolderUtilityLinks">
+							<!--	Utility Links: Start	-->
+							<WebPartPages:DataFormWebPart runat="server" IsIncluded="True" FrameType="None" NoDefaultStyle="TRUE" ViewFlag="0" Title="Utility Links" ListName="{3B331ECE-EEE6-497B-AA0E-5D5904FBFD03}" Default="FALSE" DisplayName="Utility Links" __markuptype="vsattributemarkup" __WebPartId="{4AF87288-5E6C-4E18-94E1-C9A721B83876}" id="g_4af87288_5e6c_4e18_94e1_c9a721b83876" __AllowXSLTEditing="true" WebPart="true" Height="" Width="">
+								<DataSources>
+									<SharePoint:SPDataSource runat="server" DataSourceMode="List" UseInternalName="true" selectcommand="&lt;View&gt;&lt;Query&gt;&lt;OrderBy&gt;&lt;FieldRef Name=&quot;Link_x0020_Order&quot; Ascending=&quot;TRUE&quot;/&gt;&lt;/OrderBy&gt;&lt;/Query&gt;&lt;/View&gt;" id="Utility_x0020_Links1"><SelectParameters><WebPartPages:DataFormParameter Name="ListName" ParameterKey="ListName" PropertyName="ParameterValues" DefaultValue="Utility Links"/><WebPartPages:DataFormParameter Name="WebURL" ParameterKey="WebURL" PropertyName="ParameterValues" DefaultValue="{sitecollectionroot}"/></SelectParameters><DeleteParameters><WebPartPages:DataFormParameter Name="ListName" ParameterKey="ListName" PropertyName="ParameterValues" DefaultValue="Utility Links"/><WebPartPages:DataFormParameter Name="WebURL" ParameterKey="WebURL" PropertyName="ParameterValues" DefaultValue="{sitecollectionroot}"/></DeleteParameters><UpdateParameters><WebPartPages:DataFormParameter Name="ListName" ParameterKey="ListName" PropertyName="ParameterValues" DefaultValue="Utility Links"/><WebPartPages:DataFormParameter Name="WebURL" ParameterKey="WebURL" PropertyName="ParameterValues" DefaultValue="{sitecollectionroot}"/></UpdateParameters><InsertParameters><WebPartPages:DataFormParameter Name="ListName" ParameterKey="ListName" PropertyName="ParameterValues" DefaultValue="Utility Links"/><WebPartPages:DataFormParameter Name="WebURL" ParameterKey="WebURL" PropertyName="ParameterValues" DefaultValue="{sitecollectionroot}"/></InsertParameters></SharePoint:SPDataSource>
+								</DataSources>
+								<ParameterBindings>
+								<ParameterBinding Name="ListName" Location="None" DefaultValue="Utility Links"/>
+								<ParameterBinding Name="dvt_apos" Location="Postback;Connection"/>
+								<ParameterBinding Name="UserID" Location="CAMLVariable" DefaultValue="CurrentUserName"/>
+								<ParameterBinding Name="Today" Location="CAMLVariable" DefaultValue="CurrentDate"/>
+							</ParameterBindings>
+								<datafields>@Link_x0020_Order,Link Order;@URL,URL;@Comments,Notes;@ID,ID;@ContentType,Content Type;@Modified,Modified;@Created,Created;@Author,Created By;@Editor,Modified By;@_UIVersionString,Version;@Attachments,Attachments;@Title,Title;@File_x0020_Type,File Type;@FileLeafRef,Name (for use in forms);@FileDirRef,Path;@FSObjType,Item Type;@_HasCopyDestinations,Has Copy Destinations;@_CopySource,Copy Source;@ContentTypeId,Content Type ID;@_ModerationStatus,Approval Status;@_UIVersion,UI Version;@Created_x0020_Date,Created;@FileRef,URL Path;</datafields>
+								<XSL>
+									<xsl:stylesheet xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:d="http://schemas.microsoft.com/sharepoint/dsp" version="1.0" exclude-result-prefixes="xsl msxsl ddwrt" xmlns:ddwrt="http://schemas.microsoft.com/WebParts/v2/DataView/runtime" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:__designer="http://schemas.microsoft.com/WebParts/v2/DataView/designer" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:SharePoint="Microsoft.SharePoint.WebControls" xmlns:ddwrt2="urn:frontpage:internal">
+										<xsl:output method="html" indent="no"/>
+										<xsl:decimal-format NaN=""/>
+										<xsl:param name="dvt_apos">&apos;</xsl:param>
+										<xsl:variable name="dvt_1_automode">0</xsl:variable>
+										<xsl:template match="/" xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:d="http://schemas.microsoft.com/sharepoint/dsp" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:__designer="http://schemas.microsoft.com/WebParts/v2/DataView/designer" xmlns:SharePoint="Microsoft.SharePoint.WebControls">
+														<xsl:call-template name="dvt_1"/>
+										</xsl:template>
+										<xsl:template name="dvt_1">
+														<xsl:variable name="dvt_StyleName">BulTitl</xsl:variable>
+														<xsl:variable name="Rows" select="/dsQueryResponse/Rows/Row" />
+											<ul class="utilityLinks right">
+															<xsl:call-template name="dvt_1.body">
+																			<xsl:with-param name="Rows" select="$Rows"/>
+															</xsl:call-template>
+											</ul>
+										</xsl:template>
+										<xsl:template name="dvt_1.body">
+														<xsl:param name="Rows" />
+														<xsl:for-each select="$Rows">
+																		<xsl:call-template name="dvt_1.rowview" />
+											</xsl:for-each>
+										</xsl:template>
+										<xsl:template name="dvt_1.rowview">
+														<xsl:choose>
+																		<xsl:when test="position() &gt; 1">
+													<li title="{@Comments}"><a href="{substring-before(@URL, ', ')}"><xsl:value-of select="substring-after(@URL, ', ')" /></a></li>
+												</xsl:when>
+																		<xsl:otherwise>
+													<li title="{@Comments}" class="first"><a href="{substring-before(@URL, ', ')}"><xsl:value-of select="substring-after(@URL, ', ')" /></a></li>
+												</xsl:otherwise>
+														</xsl:choose>
+										</xsl:template>
+									</xsl:stylesheet>
+								</XSL>
+							</WebPartPages:DataFormWebPart>
+							<!--	Utility Links: End	-->
+						</asp:ContentPlaceHolder><!-- End PlaceHolderUtilityLinks -->
+						
+								<div class="searchContainer">
+										<iframe title="Search Input Box"  style="float:left; height:28px; width:250px; padding:0; margin:0;" name="Search" src="/searchpage.aspx" scrolling="no" border="0" frameborder="0">
+								    		Your browser does not support inline frames or is currently configured not to display inline frames.
+								   		</iframe>
+								</div>
+							</div>
+						</asp:ContentPlaceHolder>
+		            </div>
+					</div> 
+		            
+<div class="wrapperPageBorder">
+<!-- =====  Horizontal Top Navigation Bar ============================================================ -->
+
+	<!-- top / global nav  -->
+	
+			<div id="globalNav">
+
+				<!-- =====  Horizontal Top Navigation Bar ============================================================ -->
+				<!-- top / global nav  -->
+
+		        <asp:ContentPlaceHolder ID="PlaceHolderHorizontalNav" runat="server">
+
+		        	<!--	Top navigation menu for the page	-->
+					
+					<telerik:RadMenu runat="server" ID="GlobalRadMenu" MaxDataBindDepth="2" DataSourceID="siteMapDataSource99" Skin="UCSDGlobalNav"  EnableEmbeddedSkins="false"/>
+						
+					<!-- datasource for nav  -->
+					
+					<SharePoint:DelegateControl runat="server" ControlId="TopNavigationDataSource">
+						<Template_Controls>
+							<asp:SiteMapDataSource
+							  ShowStartingNode="False"
+							  SiteMapProvider="SPNavigationProvider"
+							  id="topSiteMap"
+							  runat="server"
+							  StartingNodeUrl="sid:1002"/>
+							  
+						</Template_Controls>
+					</SharePoint:DelegateControl>
+								  <PublishingNavigation:PortalSiteMapDataSource ID="siteMapDataSource99" Runat="server"
+															SiteMapProvider="CombinedNavSiteMapProvider" EnableViewState="true"
+															StartFromCurrentNode="true" StartingNodeOffset="0" ShowStartingNode="false"
+															TreatStartingNodeAsCurrent="true" TrimNonCurrentTypes="Heading"/>
+
+				</asp:ContentPlaceHolder>
+				
+			</div>
+	
+	
+<!-- =====  Breadcrumb  ============================================================ -->			
+	<!-- page breadcrumb -->
+	<asp:ContentPlaceHolder id="PlaceHolderTitleBreadcrumb" runat="server">
+		<div id="breadcrumb">
+			<asp:SiteMapPath SiteMapProvider="CurrentNavSiteMapProviderNoEncode" PathSeparator=" / " id="ContentMap" SkipLinkText=""  RenderCurrentNodeAsLink="false" CurrentNodeStyle-CssClass="breadcrumbCurrent" NodeStyle-CssClass="ms-sitemapdirectional" runat="server"/> &nbsp;
+		</div>
+	</asp:ContentPlaceHolder>
+
+	<div class="bgContent">
+		<div class="wrapperContent3Column">
+			<div class="wrapperContent2Column">
+
+<!-- ===== Quick Launch / Left Nav  ============================================================ -->
+
+	<!-- left nav placeholder can be overridden -->
+	<asp:ContentPlaceHolder id="PlaceHolderLeftNavBar" runat="server">
+	<div class="leftNavColumn left">
+			<!--Section Title-->
+			<asp:ContentPlaceHolder id="PlaceHolderLeftNavHeader" runat="server">	
+				<div class="leftNavHeader">
+					<UCSD:SectionTitle runat="server"/></div>
+      		</asp:ContentPlaceHolder>
+	
+
+		<!-- quick launch / left nav  -->
+
+		<telerik:RadPanelBar runat="server" ID="RadPanelbar1" DataSourceID="SiteMapDS" Skin="UCSDLeftNav" EnableEmbeddedSkins="false"/>
+	
+		<!-- datasource for nav  -->
+		
+		<PublishingNavigation:PortalSiteMapDataSource ID="SiteMapDS" Runat="server"
+			SiteMapProvider="CurrentNavSiteMapProvider" EnableViewState="true"
+			StartFromCurrentNode="true" StartingNodeOffset="0" ShowStartingNode="false"
+			TrimNonCurrentTypes="Heading"/>
+
+	</div>
+	</asp:ContentPlaceHolder>
+	
+	<!-- small menu used for wiki and meetings -->
+	<asp:ContentPlaceHolder id="PlaceHolderLeftActions" runat ="server"/>	
+	
+<!-- ===== Main  ============================================================ -->	
+				
+	<!-- page title  -->
+	<asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea" runat="server" />
+	
+	<div class="mainPgContent">		
+					<!-- page content loads from the pages layout -->
+					<asp:ContentPlaceHolder id="PlaceHolderMain" runat="server"/>
+	</div>	
+	
+	<!-- The form digest security control used to for security validation on forms -->
+	<asp:ContentPlaceHolder id="PlaceHolderFormDigest" runat="server">
+		<SharePoint:FormDigest runat=server/>
+	</asp:ContentPlaceHolder>
+	
+	
+				
+
+
+		            <div class="customClear"></div>
+		        </div>
+		        
+		        
+			</div> <!-- close .wrapperContent2Column  -->
+		</div>	<!-- close .wrapperContent3Column  -->	
+	</div>	<!-- close .bgContent  -->	        
+</div> <!-- close .wrapperPageBorder which creates left & right dropshadow border around content  -->
+		        
+		        <div id="pageBottom"></div>
+				<asp:ContentPlaceHolder runat="server" id="PlaceHolderFooter">
+					<div id="footer" title="PlaceHolderFooter" style="left: 0px; top: 0px">
+		    			<asp:ContentPlaceHolder runat="server" id="PlaceHolderFooterAddress">
+							<div id="FooterAddress" title="PlaceHolderFooterAddress">
+								<ul class="address">
+									<li class="first">UCSD School of Medicine</li>
+									<li>9500 Gilman Drive, MC 0602</li>
+									<li>La Jolla, CA 92093</li>
+									<li>(858) 534-0830</li>
+								</ul>
+						    </div>
+						</asp:ContentPlaceHolder>
+						<asp:ContentPlaceHolder runat="server" id="PlaceHolderFooterLinks">
+							<div id="footerlinks" title="PlaceHolderFooterLinks">
+								<!--	Footer Links: Start	-->
+								<WebPartPages:DataFormWebPart runat="server" IsIncluded="True" FrameType="None" NoDefaultStyle="TRUE" ViewFlag="0" Title="Footer Links" ListName="{8567701E-6A38-4E0C-AD7E-D762D8CCA35A}" Default="FALSE" DisplayName="Footer Links" __markuptype="vsattributemarkup" __WebPartId="{9DC30692-7E64-46EE-86E3-D368FCF9746B}" id="g_9dc30692_7e64_46ee_86e3_d368fcf9746b" chrometype="None" __AllowXSLTEditing="true" WebPart="true" Height="" Width="">
+									<DataSources>
+										<SharePoint:SPDataSource runat="server" DataSourceMode="List" UseInternalName="true" selectcommand="&lt;View&gt;&lt;Query&gt;&lt;OrderBy&gt;&lt;FieldRef Name=&quot;Link_x0020_Order&quot; Ascending=&quot;TRUE&quot;/&gt;&lt;FieldRef Name=&quot;URL&quot; Ascending=&quot;TRUE&quot;/&gt;&lt;/OrderBy&gt;&lt;/Query&gt;&lt;/View&gt;" id="Footer_x0020_Links1"><SelectParameters><WebPartPages:DataFormParameter Name="ListName" ParameterKey="ListName" PropertyName="ParameterValues" DefaultValue="Footer Links" /><WebPartPages:DataFormParameter Name="WebURL" ParameterKey="WebURL" PropertyName="ParameterValues" DefaultValue="{sitecollectionroot}"/></SelectParameters><DeleteParameters><WebPartPages:DataFormParameter Name="ListName" ParameterKey="ListName" PropertyName="ParameterValues" DefaultValue="Footer Links" /><WebPartPages:DataFormParameter Name="WebURL" ParameterKey="WebURL" PropertyName="ParameterValues" DefaultValue="{sitecollectionroot}"/></DeleteParameters><UpdateParameters><WebPartPages:DataFormParameter Name="ListName" ParameterKey="ListName" PropertyName="ParameterValues" DefaultValue="Footer Links" /><WebPartPages:DataFormParameter Name="WebURL" ParameterKey="WebURL" PropertyName="ParameterValues" DefaultValue="{sitecollectionroot}"/></UpdateParameters><InsertParameters><WebPartPages:DataFormParameter Name="ListName" ParameterKey="ListName" PropertyName="ParameterValues" DefaultValue="Footer Links" /><WebPartPages:DataFormParameter Name="WebURL" ParameterKey="WebURL" PropertyName="ParameterValues" DefaultValue="{sitecollectionroot}"/></InsertParameters></SharePoint:SPDataSource>
+									</DataSources>
+									<ParameterBindings>
+									<ParameterBinding Name="ListName" Location="None" DefaultValue="Footer Links"/>
+									<ParameterBinding Name="dvt_apos" Location="Postback;Connection"/>
+									<ParameterBinding Name="UserID" Location="CAMLVariable" DefaultValue="CurrentUserName"/>
+									<ParameterBinding Name="Today" Location="CAMLVariable" DefaultValue="CurrentDate"/>
+								</ParameterBindings>
+									<datafields>@Link_x0020_Order,Link Order;@URL,URL;@Comments,Notes;@ID,ID;@ContentType,Content Type;@Modified,Modified;@Created,Created;@Author,Created By;@Editor,Modified By;@_UIVersionString,Version;@Attachments,Attachments;@Title,Title;@File_x0020_Type,File Type;@FileLeafRef,Name (for use in forms);@FileDirRef,Path;@FSObjType,Item Type;@_HasCopyDestinations,Has Copy Destinations;@_CopySource,Copy Source;@ContentTypeId,Content Type ID;@_ModerationStatus,Approval Status;@_UIVersion,UI Version;@Created_x0020_Date,Created;@FileRef,URL Path;</datafields>
+									<XSL>
+										<xsl:stylesheet xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:d="http://schemas.microsoft.com/sharepoint/dsp" version="1.0" exclude-result-prefixes="xsl msxsl ddwrt" xmlns:ddwrt="http://schemas.microsoft.com/WebParts/v2/DataView/runtime" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:__designer="http://schemas.microsoft.com/WebParts/v2/DataView/designer" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:SharePoint="Microsoft.SharePoint.WebControls" xmlns:ddwrt2="urn:frontpage:internal">
+											<xsl:output method="html" indent="no"/>
+											<xsl:decimal-format NaN=""/>
+											<xsl:param name="dvt_apos">'</xsl:param>
+											<xsl:variable name="dvt_1_automode">0</xsl:variable>
+											<xsl:template match="/" xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:d="http://schemas.microsoft.com/sharepoint/dsp" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:__designer="http://schemas.microsoft.com/WebParts/v2/DataView/designer" xmlns:SharePoint="Microsoft.SharePoint.WebControls">
+															<xsl:call-template name="dvt_1"/>
+											</xsl:template>
+											
+											<xsl:template name="dvt_1">
+															<xsl:variable name="Rows" select="/dsQueryResponse/Rows/Row" />
+												<ul class="footerNav">
+													<li title="Home" class="first"><a href="/">Home</a></li>
+																<xsl:call-template name="dvt_1.body">
+																				<xsl:with-param name="Rows" select="$Rows"/>
+																</xsl:call-template>
+												</ul>
+											</xsl:template>
+											<xsl:template name="dvt_1.body">
+															<xsl:param name="Rows" />
+															<xsl:for-each select="$Rows">
+																			<xsl:call-template name="dvt_1.rowview" />
+												</xsl:for-each>
+											</xsl:template>
+											<xsl:template name="dvt_1.rowview">
+												<li title="{@Comments}"><a href="{substring-before(@URL, ', ')}"><xsl:value-of select="substring-after(@URL, ', ')" /></a></li>
+											</xsl:template>
+										</xsl:stylesheet>
+									</XSL>
+								</WebPartPages:DataFormWebPart>
+								<!--	Footer Links: End	-->
+			                </div>
+						</asp:ContentPlaceHolder>
+						<asp:ContentPlaceHolder runat="server" id="PlaceHolderFooterLogo">
+							<div class="footerLogo" title="UC San Diego Footer Logo">
+								<asp:HyperLink runat="server" id="HyperLink1" ImageUrl="http://assets.ucsd.edu/img/logo/ucsd-footer.png" CssClass="logoFooter" NavigateUrl="http://www.ucsd.edu">
+								Visit UCSD Web Site</asp:HyperLink>
+							</div>
+							<div class="copyright" title="UC San Diego Copyright">
+								<p>Official Web Site of the University of California, San Diego. 
+											<script language="javascript"> 
+												<!-- 
+												today = new Date(); 
+												document.write("Copyright &copy;", today.getFullYear()); 
+												//--> 
+											</script>
+								Regents of the University of California. All rights reserved.</p>
+							</div>
+
+						</asp:ContentPlaceHolder>
+						<asp:ContentPlaceHolder runat="server" id="PlaceHolderFooterLegalLinks">
+							<!--	Legal Links: Start	-->
+							<ul class="footerLegalLinks">
+								<li class="first"><a href="/Pages/legal.aspx">Legal</a></li>	
+								<li><a href="http://health.ucsd.edu/hipaa" target="_blank">Notice of Privacy Practices</a></li>
+								<li><a href="/Pages/sitemap.aspx">Sitemap</a></li>
+							</ul>					
+							<!--	Legal Links: End	-->
+						</asp:ContentPlaceHolder>
+		            </div>
+	            </asp:ContentPlaceHolder>
+			</div>
+			<asp:Panel ID="Panel1" Visible="false" runat="server">
+				<!--	This is a complete list of all ContentPlaceHolders that may be used by a SharePoint master page per the SharePoint Product documentation	-->
+				<!--	These content placeholders are not currently used in the UCSD Health Sciences Marketing master page	-->
+		        <asp:ContentPlaceHolder runat="server" id="PlaceHolderDepartmentLink">
+			<div class="DepartmentLink">
+				
+			</div><!-- End .DepartmentLink -->
+		</asp:ContentPlaceHolder><!-- End PlaceHolderDepartmentLink --><asp:ContentPlaceHolder ID="PlaceHolderBodyLeftBorder" runat="server">
+		        	<!--	Border element for the main page body	-->
+		        </asp:ContentPlaceHolder>
+		        <asp:ContentPlaceHolder ID="PlaceHolderRightMargin" runat="server">
+		        	<!--	Right margin of the main page body	-->
+		        </asp:ContentPlaceHolder>
+		        <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarBorder" runat="server">
+		        	<!--	Border element on the left navigation bar	-->
+		        </asp:ContentPlaceHolder>
+		        <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarTop" runat="server">
+		        	<!--	Top of the left navigation area	-->
+		        </asp:ContentPlaceHolder>
+	<asp:ContentPlaceHolder id="PlaceHolderMiniConsole" runat="server">
+		<!-- mini console - supplementary buttons for pages like the wiki / history / incoming links (table helps. float table right.) -->
+	</asp:ContentPlaceHolder>
+		        <asp:ContentPlaceHolder ID="PlaceHolderNavSpacer" runat="server">
+		        	<!--	The width of the left navigation area	-->
+		        </asp:ContentPlaceHolder>
+		        <asp:ContentPlaceHolder ID="PlaceHolderTitleLeftBorder" runat="server">
+		        	<!--	Left border of the title area	-->
+		        </asp:ContentPlaceHolder>
+		        <asp:ContentPlaceHolder ID="PlaceHolderTitleRightMargin" runat="server">
+		        	<!--	Right margin of the title area	-->
+		        </asp:ContentPlaceHolder>
+		        <asp:ContentPlaceHolder ID="PlaceHolderTitleAreaSeparator" runat="server">
+		        	<!--	Shows shadows for the title area	-->
+		        </asp:contentPlaceHolder>
+		        <asp:ContentPlaceHolder ID="PlaceHolderCalendarNavigator" runat="server">
+		        	<!--	Shows a date picker for navigating in a calendar when a calendar is visible on the page	-->
+		        </asp:contentPlaceHolder>
+		        <asp:ContentPlaceHolder ID="PlaceHolderPageDescription" runat="server">
+		        	<!--	Description of the page contents	-->
+		        </asp:ContentPlaceHolder>
+		        <asp:ContentPlaceHolder ID="PlaceHolderTitleAreaClass" runat="server">
+		        	<!--	Additional styles in the page header	-->
+		        </asp:ContentPlaceHolder>
+	<asp:ContentPlaceHolder runat="server" id="PlaceHolderSiteName">
+		<!-- 	Old placeholder for site name		 -->
+    </asp:ContentPlaceHolder>
+		        <asp:ContentPlaceHolder ID="PlaceHolderTopNavBar" runat="server">
+		        	<!--	Top navigation area	-->
+		        </asp:ContentPlaceHolder>
+		        <asp:ContentPlaceHolder ID="PlaceHolderUtilityContent" runat="server">
+		        	<!--	Extra content that needs to be at the bottom of the page	-->
+		        </asp:ContentPlaceHolder>
+		        <asp:ContentPlaceHolder ID="SPNavigation" runat="server">
+		        	<!--	Empty by default in Windows SharePoint Services.  Can be used for additional page editing controls.	-->
+		        </asp:ContentPlaceHolder>
+			</asp:Panel>
+	    </form>
+	</body>
+</html>
+</body>
+
+</html>

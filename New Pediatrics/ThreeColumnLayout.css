@@ -1,0 +1,72 @@
+﻿/*
+	This style overrides certain styles from the standard UCSD styles for the ContentThreeColumn.aspx layout
+*/
+
+/*
+	First import the standard styles to get everything we normally use
+*/
+
+@import "/Style Library/UCSD.css";
+
+/*
+	Now override the styles specific to the ContentThreeColumn.aspx page
+*/
+.bgContent {
+	
+}
+.centerColumn {
+	width:495px;
+	padding: 0 25px 20px 25px;
+	z-index: 50;
+}
+
+.rightColumn {
+	width:184px;
+	left:0px;
+	background-color:#E2E2E2;
+	min-height: 350px;
+	height:auto !important;
+
+}
+.topRightImage {
+	padding: 0;
+}
+.rightText { 
+	padding: 0 10px; 
+	line-height: 18px;
+}
+
+.rightText h1 {
+	color:#00245D;			
+	font:bold 16px arial, sans-serif;
+	margin:0;
+}
+
+.rightText ul{
+	padding: 0 0 0 5px;
+	margin:0 0 8px 0;
+	list-style:none;
+}
+
+.rightText ul li{
+	padding:0 0 0 15px;
+	margin:0;
+	line-height: 18px;
+}
+
+.rightText ol {
+	margin-top:10px;
+}
+
+.rightText ol li {
+	margin-left:50px;
+	padding-bottom:5px;
+	padding-left:10px;
+	line-height:18px;
+}
+
+
+#pageBottom {
+	
+}
+

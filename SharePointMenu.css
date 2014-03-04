@@ -1,0 +1,34 @@
+﻿/*	SharePoint menus and other SharePoint specific styles	*/
+
+.SharePointMenu {
+	background-color: transparent;
+	height:19px;
+	margin:10px 0 8px;
+	width: 100%;
+	/* color: #0f3655; */
+	z-index:1500;
+}
+
+.SharePointSiteActionsMenu {
+	float:right;
+	width:auto;
+}
+
+.SharePointWelcomeMenu {
+	float:right;
+	line-height:15px;
+	margin-left:5px;
+	width:auto;
+}
+
+.sharepointLogin
+{
+	float:right;
+	display:inline;
+}
+
+.sharepointLogin div, .sharepointLogin .ms-globallinks, .sharepointLogin .ms-globallinks a,
+{
+	color:#333333;
+}
+

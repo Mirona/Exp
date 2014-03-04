@@ -1,0 +1,123 @@
+﻿/*	Styles for PlaceHolderMain/ The main body content section of the site.	*/
+
+h1{
+	color:#569bbe;		/*  Color changes per site    */
+	font:bold 21px Arial, Helvetica, sans-serif;
+	font-variant:normal;
+	padding:10px 0 18px 0;
+	margin:0;
+}
+h2{
+	color:#4d4d4f;		/*  Color changes per site    */
+	font:bold 16px Arial, Helvetica, sans-serif;
+	font-variant:normal;
+	margin:15px 0 7px 0;
+}
+h3{
+	color:#4d4d4f;		/*  Color changes per site    */
+	font:bold 14px Arial, Helvetica, sans-serif;
+	margin: 15px 0 0 0;
+}
+
+a, .ms-WPBody a:link, .ms-WPBody a:visited {
+	color:#569BBE;		
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+.mainPgContent {
+
+}
+
+.mainPgContent a{
+	text-decoration:none;
+}
+.mainPgContent a:hover{
+	text-decoration:underline;
+}
+
+.mainPgContent p{
+	padding:6px 0;
+	margin:0;
+
+}
+.mainPgContent ul, .display ul{
+	padding: 0 0 0 20px;
+	margin:0 0 8px 0;
+	list-style:none;
+}
+.mainPgContent ul li{		/*  Bullet image changes per site    */
+	padding:0 0 0 20px;
+	margin:0;
+	background:url("/Style%20Library/Images/UCSD/bullet_body.gif") 0 7px no-repeat;
+	line-height: 18px;
+}
+
+.mainPgContent ol, .display ol {
+	margin-top:10px;
+}
+
+.mainPgContent ol li, .display ol li {
+	margin-left:50px;
+	padding-bottom:5px;
+	padding-left:10px;
+	line-height:18px;
+
+}
+
+.blueButtonShort {
+	width:120px;
+	height:20px;		
+}
+
+.blueButtonShort a {
+	width:96px;
+	height:18px;	
+	display:block;
+	padding:2px 16px 0 8px;
+	font:bold 12px Arial, Helvetica, sans-serif;
+	color:#fff;
+	background:url("/Style%20Library/Images/UCSD/Btn_BlueShort.png") no-repeat;
+}
+
+.blueButtonLong {
+	width:192px;
+	height:20px;		
+}
+
+.blueButtonLong a {
+	width:168px;
+	height:18px;	
+	display:block;
+	padding:2px 16px 0 8px;
+	font:bold 12px Arial, Helvetica, sans-serif;
+	color:#fff;
+	background:url("/Style%20Library/Images/UCSD/Btn_BlueLong.png") no-repeat;
+}
+
+a.blueButtonShort {
+	width:96px;
+	height:18px;	
+	display:block;
+	padding:2px 16px 0 8px;
+	font:bold 12px Arial, Helvetica, sans-serif;
+	color:#fff;
+	background:url("/Style%20Library/Images/UCSD/Btn_BlueShort.png") no-repeat;
+}
+
+a.blueButtonLong {
+	width:168px;
+	height:18px;	
+	display:block;
+	padding:2px 16px 0 8px;
+	font:bold 12px Arial, Helvetica, sans-serif;
+	color:#fff;
+	background:url("/Style%20Library/Images/UCSD/Btn_BlueLong.png") no-repeat;
+}
+
+
+
+

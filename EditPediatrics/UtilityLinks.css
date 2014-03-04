@@ -1,0 +1,27 @@
+﻿/*	Utility Link Styles	*/
+
+.utilityLinks{
+	list-style:none;
+	padding:0 20px 0 0;
+	margin:5px 0;
+}
+
+.utilityLinks li{
+	display:inline;
+	padding:0 7px;
+	border-left:1px solid #fff; 
+	font:normal 11px Arial, Helvetica, sans-serif;
+}
+
+.utilityLinks li.first{
+	border:none;
+}
+
+.utilityLinks li a{
+	color:#fff; 
+	text-decoration:none;
+}
+
+.utilityLinks li a:hover{
+	text-decoration:underline;
+}

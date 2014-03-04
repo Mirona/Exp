@@ -1,0 +1,63 @@
+﻿/*		Styles for 3 Column Division Home Page with 3 outlined boxes on the bottom.
+		See http://oto.ucsd.edu for working example.		*/
+
+@import "/Style%20Library/JQuerySlides.css";
+
+#divisionHomeTop {
+	width:919px;
+	height:285px;
+    margin:0;
+    padding:0;
+    position:relative;
+    line-height: 20px;
+}
+
+#divisionHomeBottom {
+	min-height:310px;
+	line-height: 20px;
+	padding-top:6px;
+}
+
+#homeColumnLeft, #homeColumnRight, #homeColumnCenter {
+	min-height:287px;
+	padding:0px 10px 10px 10px;
+}
+#homeColumnLeft {
+	float:left;
+	width:270px;
+	margin-left: 10px;
+}
+
+#homeColumnCenter {
+	float: left;
+	width: 575px;
+	margin-left:12px;
+}
+
+#homeColumnRight {
+	float: right;
+	width: 575px;
+	margin-right: 10px;
+}
+
+#homeColumnLeft h1, #homeColumnRight h1, #homeColumnCenter h1{
+	color:#2D84AF;
+	font-size:21px;
+	padding-bottom:2px;
+	margin-bottom:3px;
+}
+
+#homeColumnLeft h2, #homeColumnRight h2, #homeColumnCenter h2{
+	color:#2D84AF;
+	font-size:16px;
+	padding-bottom:2px;
+	margin-bottom:3px;
+}
+
+.lineBreak {
+	width:100%;
+	height:1px;
+	background:#D8CFC6;
+	margin:5px 0px;
+}
+

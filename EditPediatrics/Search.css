@@ -1,0 +1,43 @@
+﻿/*	Search Styles	*/
+
+/*	Note:	the following styles include Microsoft SharePoint styles which are overridden for the built-in search control	*/
+/*			These styles contain "ms-" as part of the style name	*/
+
+* {
+	margin:0;
+	padding:0;
+}
+
+body {
+	background:#2d84af;			
+	margin:0;
+	padding:0;
+}
+
+input.ms-sbplain {
+	padding:0;
+	margin:0;
+	border:none;			
+}
+
+input#srchInput {
+	height:20px;
+	width:158px;
+	padding:4px 10px 0; 
+	background:url('/Style Library/Images/Search/bgInputText.gif') no-repeat;
+	font:normal 11px/14px Arial, Helvetica, sans-serif;
+	color:#666;
+}
+
+input#srchBtn {
+	height: 24px; 
+	width: 26px;
+	cursor: pointer;
+	padding:0;
+	margin:0;
+	background:transparent url('/Style%20Library/Images/Search/search_btn.gif') no-repeat; 
+}
+
+td.ms-sbcell {
+	width:168px;
+}

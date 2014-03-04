@@ -1,0 +1,55 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>Query Builder Preview Control</title>
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106601</mso:ContentTypeId>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:_dlc_DocId msdt:dt="string">7FMFKTXUU5F3-2-281</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">35f1fdec-c7eb-4a91-8236-4b43b11d9187</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">http://pedsptest.pediatrics.ucsd.edu/_layouts/15/DocIdRedir.aspx?ID=7FMFKTXUU5F3-2-281, 7FMFKTXUU5F3-2-281</mso:_dlc_DocIdUrl>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+<div id="Control_QBPreview">
+<!--#_
+    window.swapImage = function swapImage(element)
+    {
+        if (element.src.endsWith('images/PLUS.GIF'))
+        {
+            element.src = "images/MINUS.GIF";
+        }
+        else 
+        {
+            element.src = "images/PLUS.GIF";
+        }
+     }
+
+     window.showOrHide = function showOrHide(element)
+     {
+        if (element.style.display === 'none')
+        {
+            element.style.display = 'block';
+        }
+        else 
+        {
+            element.style.display = 'none';
+        }
+     }
+     ctx.ListDataJSONGroupsKey = 'ResultTables';
+_#-->
+            _#= ctx.RenderGroups(ctx) =#_
+<!--#_
+     if (ctx.ClientControl.get_shouldShowNoResultMessage()) 
+     {
+_#-->
+         _#= $htmlEncode(Srch.Res.searchResult_NoResult) =#_
+<!--#_
+     }
+_#-->
+</div>
+</body>
+</html>

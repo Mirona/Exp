@@ -1,0 +1,60 @@
+﻿#pageContent_siteMap {
+	padding:0 50px;
+}
+
+DIV.RadSiteMap_UCSDSiteMap .rsmItem { 		/* top level items  */
+	font-size: 16px;
+	background-image:none;
+}
+
+
+.RadSiteMap_UCSDSiteMap .rsmLink,
+.RadSiteMap_UCSDSiteMap .rsmTemplate
+{
+	font-family: Arial, sans-serif;
+	border-bottom: 0;
+	color: #00245D;
+}
+
+.RadSiteMap_UCSDSiteMap .rsmLink:hover,
+.RadSiteMap_UCSDSiteMap .rsmLevel1 .rsmLink:hover
+{
+	
+	color: #0067AC;							/* hover color - changes per site  */
+}
+
+.RadSiteMap_UCSDSiteMap .rsmLevel2 .rsmLink:hover,
+.RadSiteMap_UCSDSiteMap .rsmLevel1 .rsmLink,
+.RadSiteMap_UCSDSiteMap .rsmLevel1 .rsmTemplate
+{
+	
+	color: #333;
+}
+
+.RadSiteMap_UCSDSiteMap .rsmLevel2 .rsmLink,
+.RadSiteMap_UCSDSiteMap .rsmLevel2 .rsmTemplate,
+.RadSiteMap_UCSDSiteMap .rsmThreeLevels .rsmLevel1 .rsmLink,
+.RadSiteMap_UCSDSiteMap .rsmTwoLevels .rsmLevel1 .rsmLink,
+.RadSiteMap_UCSDSiteMap .rsmOneLevel .rsmItem .rsmLink
+{
+	color: #333;
+}
+
+.RadSiteMap_UCSDSiteMap .rsmLevel2 .rsmLink:hover,
+.RadSiteMap_UCSDSiteMap .rsmThreeLevels .rsmLevel1 .rsmLink:hover,
+.RadSiteMap_UCSDSiteMap .rsmTwoLevels .rsmLevel1 .rsmLink:hover,
+.RadSiteMap_UCSDSiteMap .rsmOneLevel .rsmItem .rsmLink:hover
+{
+	 color: #0067AC;				/* background hover color on sub pages - changes per site */
+}
+
+
+ DIV.RadSiteMap_UCSDSiteMap .rsmLink {
+
+	FONT-FAMILY: Arial;
+
+}
+
+ DIV.RadSiteMap_UCSDSiteMap .rsmTemplate {
+	FONT-FAMILY: Arial;
+}

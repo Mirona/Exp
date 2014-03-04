@@ -1,0 +1,34 @@
+﻿html, .body {
+	background-image:none;
+	background-color:#fff;
+}
+.centerColumn {
+	width: 8in;
+	color: #000;
+	font: 12pt/20pt "Times New Roman", Times, serif;
+	margin:.25in;
+}
+
+#header {
+	height:auto;
+	margin-top:-50px;
+}
+
+#header, .bgContent, .wrapperPageBorder {
+	background-image:none;
+	background-color:transparent;
+}
+
+h1, h2, h3 {
+	font-weight:bold;
+	color:#000;
+}
+
+a, a:visited {
+	color:blue;
+}
+#zz8_Menu_t, #ctl00_ctl10_authContainer1, #SharePointMenu, #explore, #search, #departmentheader, #HeaderTopCorners,  
+#globalNav, #breadcrumb, #printPage, #bgContent, .leftNavColumn, .rightcolumn, .topRightImage, .bottomCurvedImage, 
+.rightText, .rightTextBottom, #pageBottom, #FooterAddress, #footerlinks, .footerLogo, .footerLegalLinks {
+	display:none;
+}

@@ -1,0 +1,366 @@
+﻿/*	UCSD.css	*/
+/*	This is the primary CSS library.  All other CSS libraries link from this library	*/
+
+/*	SharePoint Styles	*/
+
+@import url("SharePointMenu.css");
+
+/*	Standard feature style sheets	*/
+
+@import url("DepartmentLinks.css");
+@import url("ExploreDropdown.css");
+@import url("Footer.css");
+@import url("GlobalNavigation.css");
+@import url("Header.css");
+@import url("LeftNavigation.css");
+@import url("Main.css");
+@import url("Breadcrumbs.css");
+@import url("UtilityLinks.css");
+@import url("SiteMap.css");
+@import url("ComboBox.css");
+@import url("RadMenu.css");
+@import url("core.css");
+@import url("jqueryslides.css");
+
+
+/*	Common feature style sheet	*/
+@import url("common.css");
+
+/* Custom Telerik Table Styles */
+@import url("TableLayoutcss.css");
+
+
+
+
+html, .body {
+	height: 100%;
+	background-color: #E8E8E8;
+	color:#333;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#wrapper {
+	width: 923px;
+    margin: 0 auto;
+	text-align:left;
+	padding-top: 0px;
+}
+.wrapperPageBorder{
+	position:relative;
+	width:919px;
+	padding:0 2px;
+	background:url("/New Pediatrics/Images/UCSD/bg_wrapper_pgborder.gif") repeat-y;
+	z-index:0;
+}
+.wrapperContent3Column {
+	/*	This is overridden in ThreeColumnLayout.css 
+	This style definition is so the right column doesn't show up on the Welcome layouts */
+	position:relative;
+	padding: 0;
+	width:919px;
+	z-index:1;
+}
+
+#container {
+	position: relative;
+	font-size: 12px;
+	line-height: 21px;
+	font-family: Arial, Verdana, Helvetica;
+}
+
+#divisioncontentwrapper {
+	width: 923px;
+	height: 267px;
+}
+
+#clearer {
+	clear: both;
+}
+
+#departmentheader {
+	width: 923px;
+	color: #00235d;
+	font-size: 30px;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Times New Roman';
+	background: #6EACC1 url("/New Pediatrics/Images/UCSD/bg_header_deptname.jpg") repeat-y;
+	position: relative;
+	line-height: 33px !important;
+	overflow: auto;
+}
+
+.clr{
+	position:relative;
+	width:1px;
+	height:1px;
+	margin-left:-1px;
+	margin-bottom:-1px;
+	font-size:1px;
+	clear:both;
+	line-height:1px;
+}
+
+.left, .right{
+	position:relative;
+	float:left;
+}
+
+.right{
+	float:right;
+}
+
+#pageBottom{
+	width:923px;
+	height:8px;
+	font-size:1px;
+	line-height:1px;
+	background:url("/New Pediatrics/Images/UCSD/pagebottom_home.gif") no-repeat left bottom;
+}
+
+blockquote {
+	margin-left:20px;
+}
+
+.caption {
+	font-size:10px;
+	line-height:normal;
+}
+
+/*		For the SEO Edit Panel on PageLayouts - No Need to Edit this    */
+td.seoPanelTitle {
+	background-color:gray;
+	color:white; 
+	font-weight:bold; 
+	text-align:center; 
+	font-size:14px;
+}
+
+/* styles for Right sidebar hard coded into a Two Column Layout and for Call Out box */
+
+.rightTextCol { 
+	width:184px;
+	padding: 0 0 20px 25px;
+	float:right;
+	line-height: 18px;
+}
+
+.rightTextBox, .callOut2Col, .callOut3Col {
+	width:184px;
+	padding:0px 10px 10px 10px;
+	margin:10px 0px 20px 20px;
+	float:right;
+	line-height: 18px;
+	background:#efefef;
+	border:1px solid #b2b1b1;			
+}
+
+.callOut2Col {
+	width:630px;
+	margin:8px 0;
+	float:none;	
+}
+
+.callOut3Col {
+	width:475px;
+	margin:8px 0;
+	float:none;	
+}
+
+.rightTextCol h1, .rightTextBox h1,
+.callOut2Col h1, .callOut3Col h1 {
+	color:#00245D;			
+	font:bold 16px arial, sans-serif;
+	margin:0;
+}
+
+.rightTextCol h3, .rightTextBox h3,
+.callOut2Col h3, .callOut3Col h3 {
+	color:#00245D;
+	border-bottom:1px solid #ccc;
+	padding-bottom:5px;
+	margin-bottom:8px;
+}
+
+.callOut2Col h1, .callOut3Col h1,
+.callOut2Col h3, .callOut3Col h3 {
+	color:#4D4D4F;		
+}
+
+.rightTextCol ul, .rightTextBox ul,
+.callOut2Col ul, .callOut3Col ul {
+	padding: 0 0 0 10px;
+	margin:0 0 8px 0;
+	list-style:none;
+}
+
+.rightTextCol ul li, .rightTextBox ul li,
+.callOut2Col ul li, .callOut3Col ul li {
+	padding:0 0 0 10px;
+	margin:0;
+	background:url("/New Pediatrics/Images/UCSD/bullet_sidebar.gif") 0 7px no-repeat;
+	line-height: 18px;
+}
+
+
+
+/* News Feed */
+
+#linkitem.item {
+	width:100%;
+	float:left;
+	clear: both;
+    margin:0;
+    padding:0 0 6px;
+}
+
+.item .image-area-left {
+	padding:5px 10px 2px 0;
+}
+
+.item .link-item {
+}
+
+.item .link-item a:link, .item .link-item a:visited {
+	color: #16366B;
+	font-size: 17px;
+	line-height: 19px;
+	font-family: Arial, Verdana, Helvetica;
+	font-weight:900;
+}
+
+.item .link-item .description {
+	font-size: 12px;
+	line-height: 18px;
+	font-family: Arial, Verdana, Helvetica;
+	padding:5px 0 0;
+}
+
+
+/* Calendar */
+
+.ECal {
+	width:100%;
+	margin:0 0 10px !important;
+	border-color:#999;
+	position:relative;
+	z-index:1;
+}
+
+.ECal td .ECalWrap {
+	width: 100%; 
+	height: 100%;
+	position:relative;
+	z-index:1;
+}
+
+.ECal td .ECalWrap:hover {
+	z-index:2;
+}
+
+.ECal a:link, .ECal a:visited {
+	color:#569bbe !important;
+}
+
+.ECalTitle {
+	color:#fff;
+	background:#569bbe;
+}
+
+.ECalTitle a:link, .ECalTitle a:visited {
+	color:#fff !important;
+	padding:0 3px;
+}
+
+.ECalToday
+{
+    background: #e8e8e8;
+}
+
+.ECalDay {
+}
+
+.balloonstyle
+{
+    text-align: left;
+    position: absolute;
+    visibility: hidden;
+    z-index: 100;
+    padding: 5px;
+    border: 1px solid #999;
+    line-height: 133%;
+    background: #fff;
+    width: 200px;
+    -moz-box-shadow: 0px 0px 8px gray;   /* FF3.5+ */
+    -webkit-box-shadow: 0px 0px 8px gray;    /* Saf3.0+, Chrome */
+    box-shadow: 0px 0px 8px gray;    /* Opera 10.5, IE 9.0 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(color=gray,direction=135,strength=5)"; /* For IE 8 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=gray,direction=135,strength=5); /* For IE 5.5 - 7 */
+}
+
+.balloonstyle ul
+{
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.balloonstyle li
+{
+    margin-left: -23px;
+    padding-bottom: 0.33em;
+    vertical-align: middle;
+    font-weight: normal;
+    width: 100%;
+}
+
+.balloonstyle {
+	top:70% !important;
+	left:70% !important;			
+}
+
+.balloonstyle ul {
+	padding:0 0 0 8px !important;			
+}
+
+.balloonstyle ul li {
+	padding:0 0 0 14px !important;			
+}
+
+/* Calendar List */
+
+.EList {
+	width:100%;
+	margin:0 0 10px !important;
+	font-size: 12px;
+	line-height: 18px;
+	font-family: Arial, Verdana, Helvetica;
+}
+
+.EList h3 {
+	font-weight:normal;
+	font-size:13px !important;
+	line-height: 18px;
+	font-family: Arial, Verdana, Helvetica;
+    text-decoration: underline;
+    margin: 0.5em 0;
+}
+
+.EList a:link, .EList a:visited {
+	color:#569bbe !important;
+}
+
+.EList ul
+{
+    margin-top: .5em;
+    margin-bottom: .75em;
+}
+
+.EList li
+{
+    margin-left: -23px;
+    line-height: 133%;
+}

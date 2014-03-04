@@ -1,0 +1,100 @@
+﻿#features a {
+	border:none;
+	text-decoration:none;
+}
+
+#features {
+	width:919px;
+	height:285px;
+	position:relative;
+	font-family:Arial, Helvetica, Sans Serif;
+}
+
+.box-shadow
+{
+	box-shadow: 0px 8px 40px -10px rgba(117,116,117,0.88);
+}
+
+#features .feature-story {
+	background:white none repeat scroll 0 0;
+	position:absolute;
+	top:0; left:0;
+}
+
+.message-back {
+	width:315px;
+	height:245px;
+	padding:30px 10px 10px 15px;
+	position:absolute;
+	top:0px; left:0px;
+	background:url("/Style Library/Images/WelcomePg/JQuerySlides/slideMessageBack.png");
+}
+
+.message-back p {
+	font-size:18px;
+	line-height:29px;
+	margin:20px 0px 0px 0px;
+	color:#000000;
+}
+
+.message-back h1 {
+	font-size:24px;
+	font-weight:bold;
+	line-height:30px;
+	margin:0px;
+	color:#00245d;
+}
+
+.message-back h2 {
+	font-size:18px;
+	line-height:24px;
+	margin:10px 0px 0px 0px;
+	color:#00245d;
+}
+
+.slide {
+	width:919px;
+	height:285px;
+	display:block;
+	position:relative;
+}
+
+#slide-1 {
+	background:url("/PublishingImages/home-page/slides/bema1.png");
+}
+
+#slide-2 {
+	background:url("/PublishingImages/home-page/slides/Suttner_HmPg2.jpg");
+}
+
+#slide-3 {
+	background:url("/PublishingImages/home-page/slides/Cherqui_Homepage.jpg");
+}
+
+#slide-4 {
+	background:url("/PublishingImages/home-page/slides/Prince_Homepage.jpg");
+}
+
+#slide-5 {
+	background:url("/PublishingImages/home-page/slides/Training_HmPg1.jpg");
+}
+
+#slide-6 {
+	background:url("/PublishingImages/home-page/slides/Huang_HmPg2.jpg");
+}
+
+#slide-7 {
+	background:url("/PublishingImages/home-page/slides/Div_Chief_HmPg6.jpg");
+}
+
+#slide-8 {
+	background:url("/PublishingImages/home-page/slides/Div_Chief_HmPg4.jpg");
+}
+
+#slide-9 {
+	background:url("/PublishingImages/home-page/slides/home_slide_images3.jpg");
+}
+
+#slide-10 {
+	background:url("/PublishingImages/home-page/slides/Give.jpg");
+}

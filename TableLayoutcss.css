@@ -1,0 +1,336 @@
+@charset "utf-8";
+/* CSS Document */
+
+.health-system {
+    border: 1px solid #CCCCCC;
+    border-collapse: collapse;
+    color: #333333;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+}
+.health-system tr.health-systemTableHeaderRow-1 {
+    background: none repeat scroll 0 0 #2D84AF;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 18px;
+    text-align: center;
+    vertical-align: top;
+}
+.health-system td.health-systemTableHeaderFirstCol-1 {
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+}
+.health-system td.health-systemTableHeaderLastCol-1 {
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+}
+.health-system td.health-systemTableHeaderOddCol-1 {
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+}
+.health-system td.health-systemTableHeaderEvenCol-1 {
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+}
+.health-system tr.health-systemTableOddRow-1 {
+    background: none repeat scroll 0 0 #FCFCFC;
+    font-size: 12px;
+    line-height: 18px;
+    vertical-align: top;
+}
+.health-system tr.health-systemTableEvenRow-1 {
+    background: none repeat scroll 0 0 #F4F4F4;
+    font-size: 12px;
+    line-height: 18px;
+    vertical-align: top;
+}
+.health-system td.health-systemTableFirstCol-1 {
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+    text-align: left;
+}
+.health-system td.health-systemTableLastCol-1 {
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+    text-align: left;
+}
+.health-system td.health-systemTableOddCol-1 {
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+    text-align: left;
+}
+.health-system td.health-systemTableEvenCol-1 {
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+    text-align: left;
+}
+.health-system tr.health-systemTableFooterRow-1 {
+    background: none repeat scroll 0 0 #F9F9F9;
+    border-top: 1px solid #CCCCCC;
+    font-size: 12px;
+    line-height: 18px;
+    vertical-align: top;
+}
+.health-system td.health-systemTableFooterFirstCol-1 {
+    border-bottom: 1px solid #CCCCCC;
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+    text-align: left;
+}
+.health-system td.health-systemTableFooterLastCol-1 {
+    border-color: #CCCCCC;
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+    text-align: left;
+}
+.health-system td.health-systemTableFooterOddCol-1 {
+    border-bottom: 1px solid #CCCCCC;
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+    text-align: left;
+}
+.health-system td.health-systemTableFooterEvenCol-1 {
+    border-bottom: 1px solid #CCCCCC;
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+    text-align: left;
+}
+.health-sciences {
+    border: 1px solid #CCCCCC;
+    border-collapse: collapse;
+    color: #333333;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+}
+.health-sciences tr.health-sciencesTableHeaderRow {
+    background: none repeat scroll 0 0 #16366B;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 18px;
+    text-align: center;
+    vertical-align: top;
+}
+.health-sciences td.health-sciencesTableHeaderFirstCol {
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+}
+.health-sciences td.health-sciencesTableHeaderLastCol {
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+}
+.health-sciences td.health-sciencesTableHeaderOddCol {
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+
+}
+.health-sciences td.health-sciencesTableHeaderEvenCol {
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+}
+.health-sciences tr.health-sciencesTableOddRow {
+    background: none repeat scroll 0 0 #FCFCFC;
+    font-size: 12px;
+    line-height: 18px;
+    vertical-align: top;
+}
+.health-sciences tr.health-sciencesTableEvenRow {
+    background: none repeat scroll 0 0 #F4F4F4;
+    font-size: 12px;
+    line-height: 18px;
+    vertical-align: top;
+}
+.health-sciences td.health-sciencesTableFirstCol {
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+    text-align: left;
+}
+.health-sciences td.health-sciencesTableLastCol {
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+    text-align: left;
+}
+.health-sciences td.health-sciencesTableOddCol {
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+    text-align: left;
+}
+.health-sciences td.health-sciencesTableEvenCol {
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+    text-align: left;
+}
+.health-sciences tr.health-sciencesTableFooterRow {
+    background: none repeat scroll 0 0 #F9F9F9;
+    border-top: 1px solid #CCCCCC;
+    font-size: 12px;
+    line-height: 18px;
+    vertical-align: top;
+}
+.health-sciences td.health-sciencesTableFooterFirstCol {
+    border-bottom: 1px solid #CCCCCC;
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+    text-align: left;
+}
+.health-sciences td.health-sciencesTableFooterLastCol {
+    border-color: #CCCCCC;
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+    text-align: left;
+}
+.health-sciences td.health-sciencesTableFooterOddCol {
+    border-bottom: 1px solid #CCCCCC;
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+    text-align: left;
+}
+.health-sciences td.health-sciencesTableFooterEvenCol {
+    border-bottom: 1px solid #CCCCCC;
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+    text-align: left;
+}
+.cancer-center {
+    border: 1px solid #CCCCCC;
+    border-collapse: collapse;
+    color: #333333;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+}
+.cancer-center tr.cancer-centerTableHeaderRow {
+    background: none repeat scroll 0 0 #A1BF87;
+    color: #00245D;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 18px;
+    text-align: center;
+    vertical-align: top;
+}
+.cancer-center td.cancer-centerTableHeaderFirstCol {
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+}
+.cancer-center td.cancer-centerTableHeaderLastCol {
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+}
+.cancer-center td.cancer-centerTableHeaderOddCol {
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+}
+.cancer-center td.cancer-centerTableHeaderEvenCol {
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+}
+.cancer-center tr.cancer-centerTableOddRow {
+    background: none repeat scroll 0 0 #FCFCFC;
+    font-size: 12px;
+    line-height: 18px;
+    vertical-align: top;
+}
+.cancer-center tr.cancer-centerTableEvenRow {
+    background: none repeat scroll 0 0 #F4F4F4;
+    font-size: 12px;
+    line-height: 18px;
+    vertical-align: top;
+}
+.cancer-center td.cancer-centerTableFirstCol {
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+    text-align: left;
+}
+.cancer-center td.cancer-centerTableLastCol {
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+    text-align: left;
+}
+.cancer-center td.cancer-centerTableOddCol {
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+    text-align: left;
+}
+.cancer-center td.cancer-centerTableEvenCol {
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+    text-align: left;
+}
+.cancer-center tr.cancer-centerTableFooterRow {
+    background: none repeat scroll 0 0 #F9F9F9;
+    border-top: 1px solid #CCCCCC;
+    font-size: 12px;
+    line-height: 18px;
+    vertical-align: top;
+}
+.cancer-center td.cancer-centerTableFooterFirstCol {
+    border-bottom: 1px solid #CCCCCC;
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+    text-align: left;
+}
+.cancer-center td.cancer-centerTableFooterLastCol {
+    border-color: #CCCCCC;
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+    text-align: left;
+}
+.cancer-center td.cancer-centerTableFooterOddCol {
+    border-bottom: 1px solid #CCCCCC;
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+    text-align: left;
+}
+.cancer-center td.cancer-centerTableFooterEvenCol {
+    border-bottom: 1px solid #CCCCCC;
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding: 5px;
+    text-align: left;
+}
+
+

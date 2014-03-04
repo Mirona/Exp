@@ -1,0 +1,103 @@
+﻿/*	Footer Styles and import directives	*/
+
+#footer{
+	font:normal 12px Arial, Helvetica, sans-serif;
+	text-align:center;
+	color:#666;
+}
+
+/*	Footer Address Styles	*/
+
+.address{
+	font-weight:bold;
+	font-size:12px;
+	padding:20px 0 15px 0;
+	text-align:center;
+	margin:0;
+}
+
+.address li{
+	display:inline;
+	padding:0 14px 0 18px;
+	background:url("/Style Library/Images/SiteAdmin/bgAddress.gif") 2px 4px no-repeat;
+}
+
+.address li.first{
+	background-image:none;
+}
+
+/*	Footer Legal Links Styles	*/
+
+.footerLegalLinks{
+	list-style:none;
+	text-align:center;
+	padding:10px 0;
+	margin:0;
+	font-size:10px;
+}
+.footerLegalLinks li{
+	display:inline;
+	border-left:1px solid #666;
+	padding:0 5px;
+}
+.footerLegalLinks li.first{
+	border:none;
+}
+.footerLegalLinks li a{
+	color:#666;
+	text-decoration:none;
+}
+.footerLegalLinks li a:hover{
+	text-decoration:underline;
+	color:#000;
+}
+
+/*	Footer Links Styles	*/
+
+.footerNav{
+	list-style:none;
+	text-align:center;
+	width:auto;
+	margin:0 0 7px 0;
+}
+.footerNav li{
+	display:inline;
+	font:normal 12px Arial, Helvetica, sans-serif;
+	border-left:1px solid #666;
+	padding:0 6px;
+}
+.footerNav li.first{
+	border:none;
+}
+.footerNav li a {
+	color:#666;
+	text-decoration:none;
+}
+.footerNav li a:hover {
+	text-decoration:underline;
+	color:#000;
+}
+
+/*	Footer Logo Styles	*/
+
+.footerLogo{
+	width:900px;
+	margin-left:auto;
+	margin-right:auto;
+	border-top:1px solid #fff;
+	margin-top:22px;
+	padding-top:10px;
+}
+
+.logoFooter{
+	padding:20px 0 12px 0;
+}
+
+.copyright{
+	font-size:10px;
+
+}
+
+.copyright p{
+	margin:0;
+}

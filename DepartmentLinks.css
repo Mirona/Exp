@@ -1,0 +1,18 @@
+﻿/*	Department Link Styles	*/
+
+.DepartmentLink {
+	background:transparent url("/Style Library/Images/Navigation/arrow_gray.gif") no-repeat scroll right center;
+	display:block;
+	padding: 0 30px;
+	font-size:11px;
+	float:left;
+}
+
+.DepartmentLink, .DepartmentLink a, .DepartmentLink a:hover, .DepartmentLink a:visited, .DepartmentLink a:link {
+	color:#666;  
+	text-decoration:none;	
+}
+
+.DepartmentLink a:hover {
+	text-decoration:underline;
+}

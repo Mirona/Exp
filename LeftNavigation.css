@@ -1,0 +1,263 @@
+﻿
+.leftNavColumn{
+	width:184px;
+	min-height: 350px;
+	height:auto !important;
+	padding:0;
+	margin:0 0 35px 0;
+	background-color:#E2E2E2;
+}
+
+.leftNav {
+	width:184px;
+	padding:10px 0 0 0px;
+	list-style:none;
+	margin:0 0 35px 0;
+}
+
+.leftNavHeader {
+	background-color:#569bbe;
+	color:#FFFFFF;		
+	font:bold 17px Arial, sans-serif;
+	padding:8px;
+	width:168px;	
+	line-height:18px;
+	text-align:center;
+}
+
+
+/* Telerik Skin Code  */
+
+.RadPanelBar_UCSDLeftNav		/*  background color for whole container  */
+{
+	/* background: #fff; */
+}
+
+.RadPanelBar_UCSDLeftNav .rpRootGroup
+{
+	border-color: #999;
+}
+
+.RadPanelBar_UCSDLeftNav .rpLink,
+.RadPanelBar_UCSDLeftNav .rpTemplate
+{
+	color: #00245D;								/* Link Color  */
+	font: normal 12px/24px Arial, sans-serif;
+}
+
+/* compensate for borders */
+
+
+div.RadPanelBar_UCSDLeftNav .rpLink .rpOut,
+div.RadPanelBar_UCSDLeftNav .rpFocused .rpOut, 
+div.RadPanelBar_UCSDLeftNav .rpLink:hover .rpOut, 
+div.RadPanelBar_UCSDLeftNav .rpSelected .rpOut, 
+div.RadPanelBar_UCSDLeftNav .rpSelected:hover .rpOut
+{
+	padding-bottom: 1px;
+	border: 0;
+}
+
+/* <disabled items> */
+.RadPanelBar_UCSDLeftNav .rpDisabled,
+.RadPanelBar_UCSDLeftNav .rpDisabled:hover
+{
+	color: #bbb;
+	background-color: #e4e4e4;
+	border-color: #999;
+	cursor: default;
+}
+
+.RadPanelBar_UCSDLeftNav .rpDisabled:hover .rpOut
+{
+	border-color: #e4e4e4;
+}
+/* </disabled items> */
+
+/* <expand arrows> */
+.RadPanelBar_UCSDLeftNav .rpExpandable .rpText,
+.RadPanelBar_UCSDLeftNav .rpExpanded .rpText
+{
+	background-color: transparent;
+	background-image: url("/Style Library/Images/Navigation/leftNav_expandable.png");
+	background-repeat: no-repeat;
+}
+/* </expand arrows> */
+
+/* <subitems> */
+.RadPanelBar_UCSDLeftNav .rpGroup		/*  background color for child container  */
+{
+	/* background-color: #fff; */
+}
+
+div.RadPanelBar_UCSDLeftNav .rpGroup .rpLink,		/* child links  */
+div.RadPanelBar_UCSDLeftNav .rpGroup .rpTemplate
+{
+	background-color: transparent;
+	background-image: none;
+	border-bottom: 1px solid #fff;
+	padding: 1px;
+}
+
+div.RadPanelBar_UCSDLeftNav .rpGroup .rpLink:hover,
+div.RadPanelBar_UCSDLeftNav .rpGroup .rpFocused,
+div.RadPanelBar_UCSDLeftNav .rpGroup .rpSelected,
+div.RadPanelBar_UCSDLeftNav .rpGroup .rpSelected:hover
+{
+	BORDER-RIGHT: 0px solid;
+	BORDER-TOP: 0px solid;
+	BORDER-LEFT: 0px solid;
+	border-bottom:1px solid #fff;
+	COLOR: #FFFFFF;
+	BACKGROUND-COLOR: #ADADAD;			/*  background color subpage selected state - change  */
+}
+
+
+/* <subitems (disabled)> */
+div.RadPanelBar_UCSDLeftNav .rpGroup .rpDisabled,
+div.RadPanelBar_UCSDLeftNav .rpGroup .rpDisabled:hover
+{
+	color: #bbb;
+	text-decoration: none;
+	background-color: #fff;
+	border: 0;
+	padding: 1px;
+}
+/* </subitems (disabled)> */
+
+/* <subitems> */
+
+/* <background positioning> */
+.RadPanelBar_UCSDLeftNav .rpLink,
+.RadPanelBar_UCSDLeftNav .rpExpanded
+{
+	background-position: 0 0;
+}
+
+.RadPanelBar_UCSDLeftNav .rpFocused,
+.RadPanelBar_UCSDLeftNav .rpLink:hover,
+.RadPanelBar_UCSDLeftNav .rpExpanded:hover
+{
+	background-position: 0 -200px;
+}
+
+.RadPanelBar_UCSDLeftNav .rpSelected,		/* Top level selected styles - change colors */
+.RadPanelBar_UCSDLeftNav .rpSelected:hover,
+DIV.RadPanelBar_UCSDLeftNav .rpRootGroup .rpLink .rpSelected
+{
+	background-position: 0 -400px;
+	background-color:#ADADAD;	
+	color:#fff;					
+}
+
+.RadPanelBar_UCSDLeftNav .rpFirst .rpLink,
+.RadPanelBar_UCSDLeftNav .rpFirst .rpExpanded
+{
+	background-position: 0 -1px;
+}
+
+.RadPanelBar_UCSDLeftNav .rpFirst .rpFocused,
+.RadPanelBar_UCSDLeftNav .rpFirst .rpLink:hover
+{
+	background-position: 0 -201px;
+}
+
+.RadPanelBar_UCSDLeftNav .rpFirst .rpSelected,
+.RadPanelBar_UCSDLeftNav .rpFirst .rpSelected:hover
+{
+	background-position: 0 -401px;
+}
+
+/*      <expand arrows> */
+.RadPanelBar_UCSDLeftNav .rpExpandable .rpText,
+.RadPanelBar_UCSDLeftNav .rpExpanded .rpText
+{
+	padding-left: 25px;
+	background-repeat: no-repeat;
+}
+
+.RadPanelBar_UCSDLeftNav_rtl .rpExpandable .rpText,
+.RadPanelBar_UCSDLeftNav_rtl .rpExpanded .rpText
+{
+	padding-left: 20px;
+}
+
+.RadPanelBar_UCSDLeftNav_rtl .rpGroup .rpText
+{
+	padding: 0 10px;
+}
+
+.RadPanelBar_UCSDLeftNav .rpExpandable .rpText { background-position: 4px 0; }
+.RadPanelBar_UCSDLeftNav .rpExpanded .rpText { background-position: 4px -176px; }
+.RadPanelBar_UCSDLeftNav_rtl .rpExpandable .rpText { background-position: 0 0; }
+.RadPanelBar_UCSDLeftNav_rtl .rpExpanded .rpText { background-position: 0 -176px; }
+
+.RadPanelBar_UCSDLeftNav .rpGroup .rpExpandable .rpText { background-position: 4px -338px; }
+.RadPanelBar_UCSDLeftNav .rpGroup .rpExpanded .rpText { background-position: 4px -477px; }
+.RadPanelBar_UCSDLeftNav_rtl .rpGroup .rpExpandable .rpText { background-position: 0 -338px; }
+.RadPanelBar_UCSDLeftNav_rtl .rpGroup .rpExpanded .rpText { background-position: 0 -477px; }
+
+/*      </expand arrows> */
+
+.RadPanelBar_UCSDLeftNav .rpGroup .rpLink,
+.RadPanelBar_UCSDLeftNav .rpGroup .rpLink .rpOut { background-position: 0 200px; }
+
+.RadPanelBar_UCSDLeftNav .rpGroup .rpLink:hover,
+.RadPanelBar_UCSDLeftNav .rpGroup .rpFocused { background-position: 4px -22px; }
+.RadPanelBar_UCSDLeftNav .rpGroup .rpLink:hover .rpOut,
+.RadPanelBar_UCSDLeftNav .rpGroup .rpFocused .rpOut { background-position: 0 0; }
+
+/*      <subitems (selected)> */
+.RadPanelBar_UCSDLeftNav .rpGroup .rpSelected,
+.RadPanelBar_UCSDLeftNav .rpGroup .rpSelected:hover { background-position: 4px -222px; background-color: transparent; }
+.RadPanelBar_UCSDLeftNav .rpGroup .rpSelected .rpOut,
+.RadPanelBar_UCSDLeftNav .rpGroup .rpSelected:hover .rpOut { background-position: 0 -200px; }
+/*      </subitems (selected)> */
+
+/* </background positioning> */
+
+
+/*  customized code for UCSD  */
+
+
+ DIV.RadPanelBar_UCSDLeftNav {
+	WIDTH: 184px;
+}
+
+ DIV.RadPanelBar_UCSDLeftNav .rpRootGroup {
+	BORDER: 0px solid;
+	margin-top: 15px;
+}
+
+ DIV.RadPanelBar_UCSDLeftNav .rpRootGroup .rpLink {
+	BORDER-BOTTOM-COLOR: #FFFFFF;
+	padding:4px 0;
+	line-height:18px;
+
+}
+
+ DIV.RadPanelBar_UCSDLeftNav .rpRootGroup .rpLink:hover {		/*  Hover state - change colors  */
+	COLOR: #FFF;
+	BACKGROUND-COLOR: #2D84AF;
+}
+
+ DIV.RadPanelBar_UCSDLeftNav .rpItem .rpGroup .rpLink:hover {  /*  Hover state sub pages - change colors  */
+	BORDER-RIGHT: 0px solid;
+	BORDER-TOP: 0px solid;
+	BORDER-LEFT: #C98400 0px solid;
+	COLOR: #FFF;
+	BACKGROUND-COLOR: #2D84AF;
+}
+
+
+ DIV.RadPanelBar_UCSDLeftNav .rpItem .rpGroup .rpLink .rpOut,		
+ DIV.RadPanelBar_UCSDLeftNav .rpItem .rpGroup .rpLink:hover .rpOut {    
+	MARGIN-LEFT: 15px;
+}
+
+
+DIV.RadPanelBar_UCSDLeftNav .rpText {
+	padding: 0 10px 0 25px;
+}
+
+
